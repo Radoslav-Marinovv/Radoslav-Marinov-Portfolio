@@ -38,7 +38,7 @@ export default function BusinessCard(): JSX.Element {
 
                 <div className={linkDivStyle}>
                   <a
-                    href="phone:+359888788687"
+                    href="tel:+359888788687"
                     className={anchorSocialStyle}>
                     <p className="text-xl">Phone</p>
                     <img
