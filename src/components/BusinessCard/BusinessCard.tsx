@@ -1,3 +1,7 @@
+import profilePicture from "../../assets/Images/profile-picture.png";
+import phoneLogo from "../../assets/Images/icon-phone.svg";
+import mailLogo from "../../assets/Images/icons-mail.png";
+
 export default function BusinessCard(): JSX.Element {
 
   const linkDivStyle = "flex dropdown dropdown-bottom dropdown-hover";
@@ -9,11 +13,10 @@ export default function BusinessCard(): JSX.Element {
       <div className="m-4 flex flex-col items-center justify-center w-full h-full p-4 bg-gray-800 rounded-lg shadow-lg">
         <div className="flex flex-col">
           <img
-            className="rounded-full"
-            src="src/assets/Images/profile-picture.png"
+            className="w-96 h-96 rounded-full"
+            src={profilePicture}
             alt="profile picture"
             width={384}
-            height={384}
           />
           <div>
             <h1 className="mt-4 text-2xl font-semibold text-white text-center">Radoslav Marinov</h1>
@@ -41,7 +44,7 @@ export default function BusinessCard(): JSX.Element {
                     <img
                       className="w-8 h-8"
                       alt="phone logo"
-                      src="src/assets/Images/icon-phone.svg"
+                      src={phoneLogo}
                     />
                     <p className={linkNameStyle}>Phone: +359 888 788 687</p>
                   </a>
@@ -54,7 +57,7 @@ export default function BusinessCard(): JSX.Element {
                     <p className="text-xl">Gmail</p>
                     <img
                       className="w-8 h-8"
-                      src="src/assets/Images/icons-mail.png"
+                      src={mailLogo}
                       alt="gmail logo" />
                     <p className={linkNameStyle}>Gmail: radoslav.marinov89@gmail.com</p>
                   </a>
