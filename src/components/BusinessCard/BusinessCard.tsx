@@ -8,7 +8,13 @@ export default function BusinessCard(): JSX.Element {
     <div className="flex flex-row items-center justify-center w-full h-full">
       <div className="m-4 flex flex-col items-center justify-center w-full h-full p-4 bg-gray-800 rounded-lg shadow-lg">
         <div className="flex flex-col">
-          <img className="w-62 h-62 rounded-full" src="src/assets/Images/profile-picture.png" alt="profile picture" />
+          <img
+            className="rounded-full"
+            src="src/assets/Images/profile-picture.png"
+            alt="profile picture"
+            width={384}
+            height={384}
+          />
           <div>
             <h1 className="mt-4 text-2xl font-semibold text-white text-center">Radoslav Marinov</h1>
             <p className="mt-2 text-lg text-white text-center">Software Developer</p>
