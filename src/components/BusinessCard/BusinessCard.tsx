@@ -4,7 +4,7 @@ import mailLogo from "../../assets/Images/icons-mail.png";
 
 export default function BusinessCard(): JSX.Element {
 
-  const linkDivStyle = "flex dropdown dropdown-bottom dropdown-hover";
+  const linkDivStyle = "flex dropdown dropdown-bottom dropdown-hover m-2 p-2";
   const anchorSocialStyle = "text-white hover:text-blue-400 flex flex-row gap-2 items-center justify-center";
   const linkNameStyle = "dropdown-content w-72 text-center";
 
@@ -13,7 +13,7 @@ export default function BusinessCard(): JSX.Element {
       <div className="m-4 flex flex-col items-center justify-center w-full h-full p-4 bg-gray-800 rounded-lg shadow-lg">
         <div className="flex flex-col">
           <img
-            className="w-96 h-96 rounded-full"
+            className="lg:w-96 lg:h-96 rounded-full"
             src={profilePicture}
             alt="profile picture"
             width={384}
@@ -24,17 +24,15 @@ export default function BusinessCard(): JSX.Element {
           </div>
         </div>
 
-        <div className="flex flex-col w-full lg:flex-row m-2">
-          <div className="card w-1/2 bg-gray-700 rounded-box grid h-52 flex-grow place-items-center">
-            <p className="m-4 text-lg text-white text-center">I am a software developer with a passion for web development. I have experience with JavaScript, TypeScript, React, Next.js, Node.js, and Firebase. I am also familiar with C# and have experience with HTML, CSS, and Git.</p>
+        <div className="flex flex-col w-full h-full m-2 lg:flex-row">
+          <div className="card lg:w-1/2 bg-gray-700 rounded-box grid h-52 flex-grow place-items-center">
+            <p className="w-full m-4 text-lg text-white text-center">I am a software developer with a passion for web development. I have experience with JavaScript, TypeScript, React, Next.js, Node.js, and Firebase. I am also familiar with C# and have experience with HTML, CSS, and Git.</p>
           </div>
           <div className="divider lg:divider-horizontal"></div>
-          <div className="card w-1/2 bg-gray-700 rounded-box grid h-52 flex-grow place-items-center">
+          <div className="card lg:w-1/2 bg-gray-700 rounded-box grid h-52 flex-grow place-items-center">
             <div className="flex flex-col w-full items-center justify-center gap-4">
-              <h2 className="h-full text-center text-white text-2xl">You can find me here</h2>
-              <div className="flex gap-4 text-center">
-
-
+              <h2 className="lg:h-full text-center text-white text-2xl">You can find me here</h2>
+              <div className="grid grid-cols-2 lg:flex gap-4 text-center">
 
                 <div className={linkDivStyle}>
                   <a
