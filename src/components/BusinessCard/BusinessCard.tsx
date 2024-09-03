@@ -2,6 +2,10 @@ import profilePicture from "../../assets/Images/profile-picture.png";
 import phoneLogo from "../../assets/Images/icon-phone.svg";
 import mailLogo from "../../assets/Images/icons-mail.png";
 
+/**
+ * BusinessCard component
+ * @returns JSX.Element
+ */
 export default function BusinessCard(): JSX.Element {
 
   const linkDivStyle = "flex dropdown dropdown-bottom dropdown-hover m-2 p-2";
