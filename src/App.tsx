@@ -1,4 +1,3 @@
-import BusinessCard from "./components/BusinessCard/BusinessCard"
 import Hero from "./components/Hero/Hero"
 import TechStack from "./components/TechStack/TechStack"
 
