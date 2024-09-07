@@ -6,7 +6,7 @@ import resume from "../../assets/Files/RadoslavMarinovResume.pdf";
 export default function Hero(): JSX.Element {
 
   const anchorSocialStyle = "btn hover:text-blue-400";
-  const fieldsetStyle = "border border-white border-opacity-35 rounded-lg shadow-md";
+  const fieldsetStyle = "border border-white border-opacity-10 rounded-lg shadow-md";
   const legendStyle = "xl:h-full ml-4 p-2 font-bold text-orange-500 text-lg";
 
   return (
@@ -69,7 +69,7 @@ export default function Hero(): JSX.Element {
                 <p className="text-lg">LinkedIn: Radoslav Marinov</p>
               </a>
             </div>
-            <div className={`w-full m-2 text-center`}> Or get my resume <a href={resume} download="RadoslavMarinovResume.pdf" className="btn btn-outline">Download</a></div>
+            <div className={`w-full m-2 text-center`}> Download my resume <a href={resume} download="RadoslavMarinovResume.pdf" className="btn btn-outline btn-accent btn-sm scale-95">RadoslavMarinovResume.pdf</a></div>
           </fieldset>
         </div>
       </div>
