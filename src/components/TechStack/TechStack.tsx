@@ -43,11 +43,11 @@ export default function TechStack({ text = "Tech Stack:", width = 70, all = fals
     js = ts = react = next = node = firebase = jest = csharp = html = css = github = git = true;
   }
 
-  const techDivStyle = "dropdown dropdown-hover p-2";
+  const techDivStyle = "dropdown dropdown-hover p-2 item";
   const techNameStyle = "dropdown-content w-full text-center";
 
   return (
-    <div className="lg:flex text-center lg:flex-row gap-2 justify-center">
+    <div className="lg:flex text-center lg:flex-row gap-2 justify-center list">
       <h2 className="p-2 text-3xl font-semibold">{text}</h2>
 
       {js &&
