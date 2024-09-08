@@ -1,5 +1,5 @@
 import TailwindImage from "../../assets/Images/tailwind.jpg";
-import JsonImage from "../../assets/Images/json.png";
+import JsonImage from "../../assets/Images/JSON.png";
 import MomentJSLogo from '../../assets/Images/moment-js.svg';
 
 type TechStackProps = {
