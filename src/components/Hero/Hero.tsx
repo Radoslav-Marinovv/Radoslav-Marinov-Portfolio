@@ -2,12 +2,12 @@ import profilePicture from "../../assets/Images/profile-picture.png";
 import phoneLogo from "../../assets/Images/icon-phone.svg";
 import mailLogo from "../../assets/Images/icons-mail.png";
 import resume from "../../assets/Files/RadoslavMarinovResume.pdf";
+import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
 export default function Hero(): JSX.Element {
 
   const anchorSocialStyle = "btn hover:text-blue-400";
-  const fieldsetStyle = "border border-white border-opacity-10 rounded-lg shadow-md";
-  const legendStyle = "xl:h-full ml-4 p-2 font-bold text-orange-500 text-lg";
+
 
   return (
     <div className="hero bg-base-200 min-h-screen">
@@ -19,15 +19,15 @@ export default function Hero(): JSX.Element {
           className="max-w-sm rounded-lg shadow-2xl" />
         <div>
           <h1 className="text-5xl font-bold ">Radoslav Marinov</h1>
-          <fieldset className={fieldsetStyle}>
-            <legend className={legendStyle}>Software Developer</legend>
+          <fieldset className={FIELDSET_STYLE}>
+            <legend className={LEGEND_STYLE}>Software Developer</legend>
             <p className="p-6">
               I am a software developer with a passion for web development. I have experience with JavaScript, TypeScript, React, Next.js, Node.js, and Firebase. I am also familiar with C# and have experience with HTML, CSS, and Git.
             </p>
           </fieldset>
 
-          <fieldset className={fieldsetStyle}>
-            <legend className={legendStyle}>You can find me here</legend>
+          <fieldset className={FIELDSET_STYLE}>
+            <legend className={LEGEND_STYLE}>You can find me here</legend>
             <div className="">
               <a
                 href="tel:+359888788687"
