@@ -1,3 +1,7 @@
+import TailwindImage from "../../assets/Images/tailwind.jpg";
+import JsonImage from "../../assets/Images/json.png";
+import MomentJSLogo from '../../assets/Images/moment-js.svg';
+
 type TechStackProps = {
   text?: string;
   width?: number;
@@ -14,6 +18,9 @@ type TechStackProps = {
   css?: boolean;
   github?: boolean;
   git?: boolean;
+  tailwind?: boolean;
+  json?: boolean;
+  moment?: boolean;
 };
 /**
  * Renders a tech stack component with customizable options.
@@ -34,13 +41,16 @@ type TechStackProps = {
  * @param {boolean} [props.css=false] - Flag indicating whether to display CSS logo.
  * @param {boolean} [props.github=false] - Flag indicating whether to display GitHub logo.
  * @param {boolean} [props.git=false] - Flag indicating whether to display Git logo.
+ * @param {boolean} [props.tailwind=false] - Flag indicating whether to display tailwindcss logo.
+ * @param {boolean} [props.json=false] - Flag indicating whether to display JSON logo.
+ * @param {boolean} [props.moment=false] - Flag indicating whether to display Moment.js logo.
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, json = false, moment = false }: TechStackProps): JSX.Element {
 
   if (all) {
-    js = ts = react = next = node = firebase = jest = csharp = html = css = github = git = true;
+    js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = git = json = moment = true;
   }
 
   const techDivStyle = "dropdown dropdown-hover p-2 item";
@@ -131,6 +141,26 @@ export default function TechStack({ text = "Tech Stack:", width = 70, all = fals
         <div className={techDivStyle}>
           <img width={width} alt="git logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
           <p className={techNameStyle}>Git</p>
+        </div>
+      }
+
+
+      {tailwind &&
+        <div className={techDivStyle}>
+          <img width={width} alt="tailwind logo" src={TailwindImage} />
+          <p className={techNameStyle}>TailwindCSS</p>
+        </div>
+      }
+      {json &&
+        <div className={techDivStyle}>
+          <img width={width} alt="json logo" src={JsonImage} />
+          <p className={techNameStyle}>JSON</p>
+        </div>
+      }
+      {moment &&
+        <div className={techDivStyle}>
+          <img width={width} alt="moment logo" src={MomentJSLogo} />
+          <p className={techNameStyle}>Moment.js</p>
         </div>
       }
 
