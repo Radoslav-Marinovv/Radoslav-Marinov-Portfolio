@@ -6,19 +6,19 @@ import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
 export default function Hero(): JSX.Element {
 
-  const anchorSocialStyle = "btn hover:text-blue-400";
+  const anchorSocialStyle = "btn my-4 sx:m-2 hover:text-blue-400 text-lg";
 
 
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content max-w-sx w-screen flex-col lg:flex-row">
         <img
           src={profilePicture}
           alt="profile picture"
           width={384}
-          className="max-w-sm rounded-lg shadow-2xl" />
+          className="max-w-sx rounded-lg shadow-2xl" />
         <div>
-          <h1 className="text-5xl font-bold ">Radoslav Marinov</h1>
+          <h1 className="text-5xl font-bold">Radoslav Marinov</h1>
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>Software Developer</legend>
             <p className="p-6">
@@ -28,48 +28,52 @@ export default function Hero(): JSX.Element {
 
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>You can find me here</legend>
-            <div className="">
-              <a
-                href="tel:+359888788687"
-                className={anchorSocialStyle}>
-                <img
-                  className="w-8 h-8"
-                  alt="phone logo"
-                  src={phoneLogo}
-                />
-                <p className="text-lg">Phone: +359 888 788 687</p>
-              </a>
-              <a
-                href="https://github.com/Radoslav-Marinovv"
-                target="_blank"
-                className={anchorSocialStyle}>
-                <img
-                  className="w-8 h-8"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                  alt="github logo" />
-                <p className="text-lg">GitHub: Radoslav-Marinovv</p>
-              </a>
-              <a
-                href="mailto:radoslav.marinov89@gmail.com"
-                className={anchorSocialStyle}>
-                <img
-                  className="w-8 h-8"
-                  src={mailLogo}
-                  alt="gmail logo" />
-                <p className="text-lg">Mail: radoslav.marinov89@gmail.com</p>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/radoslav-marinov-0b940689/"
-                target="_blank"
-                className={anchorSocialStyle}>
-                <img
-                  className="w-8 h-8"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                  alt="linkedin logo" />
-                <p className="text-lg">LinkedIn: Radoslav Marinov</p>
-              </a>
+            <div className="flex flex-wrap justify-evenly align-baseline">
+              <div className="lg:w-1/2">
+                <a
+                  href="tel:+359888788687"
+                  className={anchorSocialStyle}>
+                  <img
+                    className="w-8 h-8"
+                    alt="phone logo"
+                    src={phoneLogo}
+                  />
+                  +359 888 788 687
+                </a>
+                <a
+                  href="mailto:radoslav.marinov89@gmail.com"
+                  className={anchorSocialStyle}>
+                  <img
+                    className="w-8 h-8"
+                    src={mailLogo}
+                    alt="gmail logo" />
+                  radoslav.marinov89@gmail.com
+                </a>
+              </div>
+              <div className="lg:w-1/2">
+                <a
+                  href="https://www.linkedin.com/in/radoslav-marinov-0b940689/"
+                  target="_blank"
+                  className={anchorSocialStyle}>
+                  <img
+                    className="w-8 h-8"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                    alt="linkedin logo" />
+                  Radoslav Marinov
+                </a>
+                <a
+                  href="https://github.com/Radoslav-Marinovv"
+                  target="_blank"
+                  className={anchorSocialStyle}>
+                  <img
+                    className="w-8 h-8"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    alt="github logo" />
+                  Radoslav-Marinovv
+                </a>
+              </div>
+              <div className={`w-full p-4 text-center`}> Download my resume <a href={resume} download="RadoslavMarinovResume.pdf" className="btn btn-outline btn-accent btn-sm scale-95">RadoslavMarinovResume.pdf</a></div>
             </div>
-            <div className={`w-full m-2 text-center`}> Download my resume <a href={resume} download="RadoslavMarinovResume.pdf" className="btn btn-outline btn-accent btn-sm scale-95">RadoslavMarinovResume.pdf</a></div>
           </fieldset>
         </div>
       </div>
