@@ -4,6 +4,7 @@ import MomentJSLogo from '../../assets/Images/moment-js.svg';
 import BloggerLogo from '../../assets/Images/blogger.png';
 import DaisyUILogo from '../../assets/Images/daisyui.png';
 import NextraLogo from '../../assets/Images/nextra.png';
+import MDXLogo from '../../assets/Images/mdx.svg';
 
 type TechStackProps = {
   text?: string;
@@ -27,6 +28,7 @@ type TechStackProps = {
   blogger?: boolean;
   daisyui?: boolean;
   nextra?: boolean;
+  mdx?: boolean;
 };
 /**
  * Renders a tech stack component with customizable options.
@@ -53,6 +55,7 @@ type TechStackProps = {
  * @param {boolean} [props.blogger=false] - Flag indicating whether to display Blogger logo.
  * @param {boolean} [props.daisyui=false] - Flag indicating whether to display DaisyUI logo.
  * @param {boolean} [props.nextra=false] - Flag indicating whether to display Nextra logo.
+ * @param {boolean} [props.mdx=false] - Flag indicating whether to display MDX logo.
  * 
  * @example
  * // Display all tech stack logos.
@@ -64,7 +67,7 @@ type TechStackProps = {
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, json = false, moment = false, blogger = false, nextra = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
 
   if (all) {
     js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = daisyui = git = json = moment = blogger = nextra = true;
@@ -201,6 +204,13 @@ export default function TechStack({ text = "Tech Stack:", width = 70, all = fals
         <div className={techDivStyle}>
           <img width={width} alt="nextra logo" src={NextraLogo} />
           <p className={techNameStyle}>Nextra</p>
+        </div>
+      }
+
+      {mdx &&
+        <div className={techDivStyle}>
+          <img width={width} alt="mdx logo" src={MDXLogo} />
+          <p className={techNameStyle}>MDX</p>
         </div>
       }
 
