@@ -3,6 +3,7 @@ import JsonImage from "../../assets/Images/JSON.png";
 import MomentJSLogo from '../../assets/Images/moment-js.svg';
 import BloggerLogo from '../../assets/Images/blogger.png';
 import DaisyUILogo from '../../assets/Images/daisyui.png';
+import NextraLogo from '../../assets/Images/nextra.png';
 
 type TechStackProps = {
   text?: string;
@@ -25,6 +26,7 @@ type TechStackProps = {
   moment?: boolean;
   blogger?: boolean;
   daisyui?: boolean;
+  nextra?: boolean;
 };
 /**
  * Renders a tech stack component with customizable options.
@@ -50,6 +52,7 @@ type TechStackProps = {
  * @param {boolean} [props.moment=false] - Flag indicating whether to display Moment.js logo.
  * @param {boolean} [props.blogger=false] - Flag indicating whether to display Blogger logo.
  * @param {boolean} [props.daisyui=false] - Flag indicating whether to display DaisyUI logo.
+ * @param {boolean} [props.nextra=false] - Flag indicating whether to display Nextra logo.
  * 
  * @example
  * // Display all tech stack logos.
@@ -61,10 +64,10 @@ type TechStackProps = {
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, json = false, moment = false, blogger = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, json = false, moment = false, blogger = false, nextra = false }: TechStackProps): JSX.Element {
 
   if (all) {
-    js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = daisyui = git = json = moment = blogger = true;
+    js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = daisyui = git = json = moment = blogger = nextra = true;
   }
 
   const techDivStyle = "dropdown dropdown-hover mb-8 p-2 item";
@@ -191,6 +194,13 @@ export default function TechStack({ text = "Tech Stack:", width = 70, all = fals
         <div className={techDivStyle}>
           <img width={width} alt="blogger logo" src={BloggerLogo} />
           <p className={techNameStyle}>Blogger</p>
+        </div>
+      }
+
+      {nextra &&
+        <div className={techDivStyle}>
+          <img width={width} alt="nextra logo" src={NextraLogo} />
+          <p className={techNameStyle}>Nextra</p>
         </div>
       }
 
