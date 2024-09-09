@@ -29,15 +29,6 @@ export default function ProjectCard({ title, description, techStack, github, web
             {techStack}
           </div>
           <div className="card-actions justify-end">
-            {github && <fieldset className={`${FIELDSET_STYLE}`}>
-              <legend className={LEGEND_STYLE}>GitHub repository</legend>
-              <a
-                className="btn btn-link"
-                target="_blank"
-                href={github}>
-                {github}
-              </a>
-            </fieldset>}
             {website && <fieldset className={FIELDSET_STYLE}>
               <legend className={LEGEND_STYLE}>Website</legend>
               <a
@@ -45,6 +36,15 @@ export default function ProjectCard({ title, description, techStack, github, web
                 target="_blank"
                 href={website}>
                 {website}
+              </a>
+            </fieldset>}
+            {github && <fieldset className={`${FIELDSET_STYLE}`}>
+              <legend className={LEGEND_STYLE}>GitHub repository</legend>
+              <a
+                className="btn btn-link"
+                target="_blank"
+                href={github}>
+                {github}
               </a>
             </fieldset>}
           </div>
