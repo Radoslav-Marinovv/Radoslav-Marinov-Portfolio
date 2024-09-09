@@ -1,4 +1,4 @@
-import TailwindImage from "../../assets/Images/tailwind.jpg";
+import TailwindImage from "../../assets/Images/tailwind-css-logo.svg";
 import JsonImage from "../../assets/Images/JSON.png";
 import MomentJSLogo from '../../assets/Images/moment-js.svg';
 import BloggerLogo from '../../assets/Images/blogger.png';
