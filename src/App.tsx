@@ -22,7 +22,7 @@ function App() {
         <div className="flex flex-col align-middle justify-center items-center">
           <ProjectCard
             title={`Fitness tracking application: Motion Mate`}
-            description={"As part of a team, I was involved in creating the fitness tracking application, where users can track their daily exercises, such as calories burned, exercises done, or other activities. Users can set their goals and track their progress. They can also add their friends and see their progress as well. I was responsible for creating the database connection, the GitHub repository, and building the functionality and style of the project."}
+            description={"As part of a team, I was involved in creating the fitness tracking application, where users can track their daily exercises, such as calories burned, exercises done, or other activities. Users can set their goals, track their progress, add friends (and see their progress as well). I was responsible for creating the database connection, the GitHub repository, and building the functionality and style for the project."}
             techStack={<TechStack react js firebase tailwind daisyui json />}
             github="https://github.com/A58-Agents-Team1/Motion.Mate"
             website="https://a58-agents-team1.github.io/Motion.Mate//"
