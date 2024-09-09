@@ -5,7 +5,7 @@ type ProjectCardProps = {
   description: string;
   techStack: React.ReactNode;
   github: string;
-  website: string;
+  website?: string;
   image: string;
 };
 
