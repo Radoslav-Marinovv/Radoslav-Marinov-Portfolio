@@ -1,6 +1,7 @@
 import TailwindImage from "../../assets/Images/tailwind.jpg";
 import JsonImage from "../../assets/Images/JSON.png";
 import MomentJSLogo from '../../assets/Images/moment-js.svg';
+import BloggerLogo from '../../assets/Images/blogger.png';
 
 type TechStackProps = {
   text?: string;
@@ -21,6 +22,7 @@ type TechStackProps = {
   tailwind?: boolean;
   json?: boolean;
   moment?: boolean;
+  blogger?: boolean;
 };
 /**
  * Renders a tech stack component with customizable options.
@@ -44,13 +46,22 @@ type TechStackProps = {
  * @param {boolean} [props.tailwind=false] - Flag indicating whether to display tailwindcss logo.
  * @param {boolean} [props.json=false] - Flag indicating whether to display JSON logo.
  * @param {boolean} [props.moment=false] - Flag indicating whether to display Moment.js logo.
+ * @param {boolean} [props.blogger=false] - Flag indicating whether to display Blogger logo.
+ * 
+ * @example
+ * // Display all tech stack logos.
+ * <TechStack all={true} text="" />
+ * 
+ * @example
+ * // Display only JavaScript, TypeScript, and React logos.
+ * <TechStack js ts react />
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, json = false, moment = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, json = false, moment = false, blogger = false }: TechStackProps): JSX.Element {
 
   if (all) {
-    js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = git = json = moment = true;
+    js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = git = json = moment = blogger = true;
   }
 
   const techDivStyle = "dropdown dropdown-hover mb-8 p-2 item";
@@ -151,16 +162,25 @@ export default function TechStack({ text = "Tech Stack:", width = 70, all = fals
           <p className={techNameStyle}>TailwindCSS</p>
         </div>
       }
+
       {json &&
         <div className={techDivStyle}>
           <img width={width} alt="json logo" src={JsonImage} />
           <p className={techNameStyle}>JSON</p>
         </div>
       }
+
       {moment &&
         <div className={techDivStyle}>
           <img width={width} alt="moment logo" src={MomentJSLogo} />
           <p className={techNameStyle}>Moment.js</p>
+        </div>
+      }
+
+      {blogger &&
+        <div className={techDivStyle}>
+          <img width={width} alt="blogger logo" src={BloggerLogo} />
+          <p className={techNameStyle}>Blogger</p>
         </div>
       }
 
