@@ -16,7 +16,7 @@ function App() {
       </div>
       <div className="flex flex-col text-center">
         <h2 className="text-4xl font-bold py-8">Projects</h2>
-        <div>
+        <div className="flex flex-col align-middle justify-center items-center">
           <ProjectCard
             title={`"Groshev & Partners"`}
             description={"Took part in leading the communication with the client, planned the technologies that best met the client's requirements, and determined the necessary steps to meet the client's criteria."}
@@ -27,7 +27,7 @@ function App() {
           />
           <ProjectCard
             title={`TWITTER LIKE SPA`}
-            description={"React with TypeScript application created by Vite. Display mock data on main page by fetching it from custom hook. Validate it before creating new post (check for the min – max length of the post). Communication between current User Object and Post Object and update likes and posts."}
+            description={"React with TypeScript application created by Vite. Presenting mock data on main page by fetching it from custom hook. Validation before creating new post (check for the minimum - maximum length of the post). Communication between user and post objects and update likes and posts at user object."}
             techStack={<TechStack react ts tailwind json moment />}
             github="https://github.com/Radoslav-Marinovv/like-comment"
             website="https://radoslav-marinovv.github.io/like-comment/"
