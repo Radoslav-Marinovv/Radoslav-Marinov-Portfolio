@@ -20,7 +20,7 @@ export default function ProjectCard({ title, description, techStack, github, web
              md:h-full md:w-64 md:object-cover md:object-left
              md:hover:absolute 
              md:hover:top-2 md:hover:left-0 md:hover:z-10 
-             md:hover:w-full md:hover:object-contain 
+             md:hover:w-fit md:hover:object-contain 
              md:transition-all md:duration-1000 md:hover:scale-125 md:hover:ease-linear"
             src={image}
             alt={title + "image"} />
