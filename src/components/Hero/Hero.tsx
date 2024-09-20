@@ -6,11 +6,11 @@ import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
 export default function Hero(): JSX.Element {
 
-  const anchorSocialStyle = "btn my-4 sx:m-2 hover:text-blue-400 text-lg";
+  const anchorSocialStyle = "btn my-4 sx:m-2 h-fit hover:text-blue-400 text-lg";
 
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-base-300 min-h-screen">
       <div className="hero-content max-w-sx w-screen flex-col lg:flex-row">
         <img
           src={profilePicture}
@@ -28,8 +28,8 @@ export default function Hero(): JSX.Element {
 
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>You can find me here</legend>
-            <div className="flex flex-wrap justify-evenly align-baseline">
-              <div className="lg:w-1/2">
+            <div className="flex flex-wrap justify-evenly align-baseline ">
+              <div className="lg:w-1/2 pl-2">
                 <a
                   href="tel:+359888788687"
                   className={anchorSocialStyle}>
@@ -50,7 +50,7 @@ export default function Hero(): JSX.Element {
                   radoslav.marinov89@gmail.com
                 </a>
               </div>
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 pl-2">
                 <a
                   href="https://www.linkedin.com/in/radoslav-marinov-0b940689/"
                   target="_blank"
