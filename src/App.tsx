@@ -7,19 +7,21 @@ import TicTacToe from "./assets/Images/tic-tac-toe-light.jpg"
 import PortfolioOld from "./assets/Images/portfolio.jpg"
 import ForumTRT from './assets/Images/tasty-recipe-talk.jpg'
 import MotionMate from './assets/Images/motion-mate.jpg'
+import Education from "./components/Education/Education"
 
 function App() {
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 ">
       <Hero />
+      <Education />
       <div className="items-center justify-center max-w-full max-h-full rounded-lg shadow-lg">
         <h2 className="pb-8 text-4xl font-bold text-center">My Tech Stack</h2>
         <TechStack all={true} text="" />
       </div>
       <div className="flex flex-col text-center">
         <h2 className="text-4xl font-bold py-8">Projects</h2>
-        <div className="flex flex-col align-middle justify-center items-center">
+        <div className="flex flex-col p-2 align-middle justify-center items-center">
           <ProjectCard
             title={`Fitness tracking application: Motion Mate`}
             description={"As part of a team, I was involved in creating the fitness tracking application, where users can track their daily exercises, such as calories burned, exercises done, or other activities. Users can set their goals, track their progress, add friends (and see their progress as well). I was responsible for creating the database connection, the GitHub repository, and building the functionality and style for the project."}
