@@ -13,20 +13,20 @@ export default function ProjectCard({ title, description, techStack, github, web
 
   return (
     <>
-      <div className="card md:flex-row border bg-base-100 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
-        <figure className="border-1 shadow-xl md:hover:w-64 md:max-w-64">
+      <div className="card md:flex-row bg-base-300 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
+        <figure className="border rounded-lg border-primary shadow-xl md:hover:w-64 md:max-w-64">
           <img
             className="rounded-lg w-full h-64
-             md:h-full md:w-64 md:object-cover md:object-left
-             md:hover:absolute 
-             md:hover:top-2 md:hover:left-0 md:hover:z-10 
-             md:hover:w-fit md:hover:object-contain 
+             md:h-full md:w-64 md:object-cover
+             md:hover:absolute md:hover:top-2 md:hover:left-0 md:hover:z-10 
+             md:hover:w-fit md:hover:object-contain
+             md:hover:border md:hover:border-primary md:hover:rounded-lg md:hover:shadow-2xl  
              md:transition-all md:duration-1000 md:hover:scale-125 md:hover:ease-linear"
             src={image}
             alt={title + "image"} />
         </figure>
         <div className="card-body md:w-2/3">
-          <h2 className="card-title text-orange-500">
+          <h2 className="card-title">
             {title}
           </h2>
           <p className="card-bordered font-medium">
