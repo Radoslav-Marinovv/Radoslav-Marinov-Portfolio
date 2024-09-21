@@ -1,5 +1,5 @@
 import EducationItem from "./EducationItem";
-import VUZFLogo from "../../assets/images/vuzf.png";
+import VuzfLogo from "../../assets/Images/vuzf.png";
 import TelerikLogo from "../../assets/Images/telerik-academy.svg";
 
 /**
@@ -23,7 +23,7 @@ export default function Education(): JSX.Element {
           degree={"Bachelor`s degree, Accounting"}
           date={"10/2009 - 07/2013"}
           location={"Sofia, Bulgaria"}
-          logoImage={VUZFLogo}
+          logoImage={VuzfLogo}
         />
       </div>
     </div>
