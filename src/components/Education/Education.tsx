@@ -1,5 +1,5 @@
 import EducationItem from "./EducationItem";
-import VUZFLogo from "../../assets/images/VUZF_logo_ENG_NEW_FONT_White.png";
+import VUZFLogo from "../../assets/images/VUZF-logo.png";
 import TelerikLogo from "../../assets/Images/telerik-academy.svg";
 
 /**
