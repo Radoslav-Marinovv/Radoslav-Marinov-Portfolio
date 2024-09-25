@@ -1,11 +1,11 @@
-import TailwindImage from "../../assets/Images/tailwind-css-logo.svg";
-import JsonImage from "../../assets/Images/JSON.png";
-import MomentJSLogo from '../../assets/Images/moment-js.svg';
-import BloggerLogo from '../../assets/Images/blogger.png';
-import DaisyUILogo from '../../assets/Images/daisyui.png';
-import NextraLogo from '../../assets/Images/nextra.png';
-import MDXLogo from '../../assets/Images/mdx.svg';
-import ChakraUILogo from '../../assets/Images/chakra-ui.png';
+import TailwindImage from "../../assets/images/tailwind-css-logo.svg";
+import JsonImage from "../../assets/images/JSON.png";
+import MomentJSLogo from '../../assets/images/moment-js.svg';
+import BloggerLogo from '../../assets/images/blogger.png';
+import DaisyUILogo from '../../assets/images/daisyui.png';
+import NextraLogo from '../../assets/images/nextra.png';
+import MDXLogo from '../../assets/images/mdx.svg';
+import ChakraUILogo from '../../assets/images/chakra-ui.png';
 
 type TechStackProps = {
   text?: string;

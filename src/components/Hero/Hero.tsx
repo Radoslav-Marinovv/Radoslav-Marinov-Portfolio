@@ -1,7 +1,7 @@
-import profilePicture from "../../assets/Images/profile-picture.png";
-import phoneLogo from "../../assets/Images/icon-phone.svg";
-import mailLogo from "../../assets/Images/icons-mail.png";
-import resume from "../../assets/Files/RadoslavMarinovResume.pdf";
+import profilePicture from "../../assets/images/profile-picture.png";
+import phoneLogo from "../../assets/images/icon-phone.svg";
+import mailLogo from "../../assets/images/icons-mail.png";
+import resume from "../../assets/files/RadoslavMarinovResume.pdf";
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
 /**
