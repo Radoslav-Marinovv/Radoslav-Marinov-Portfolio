@@ -9,7 +9,18 @@ type ProjectCardProps = {
   website?: string;
   image: string;
 };
-
+/**
+ * Renders a project card component with customizable options.
+ * 
+ * @param {string} props.title - The title of the project.
+ * @param {string} props.description - The description of the project.
+ * @param {Object} props.techStack - The tech stack of the project.
+ * @param {string} props.github - The GitHub repository of the project.
+ * @param {string} [props.website] - The website of the project.
+ * @param {string} props.image - The image of the project.
+ * 
+ * @returns {JSX.Element} The rendered project card component.
+ */
 export default function ProjectCard({ title, description, techStack, github, website, image }: ProjectCardProps): JSX.Element {
 
   return (
