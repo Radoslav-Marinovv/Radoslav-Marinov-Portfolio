@@ -4,10 +4,13 @@ import mailLogo from "../../assets/Images/icons-mail.png";
 import resume from "../../assets/Files/RadoslavMarinovResume.pdf";
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
+/**
+ * Renders a hero component with customizable options.
+ * @returns {JSX.Element} The rendered hero component.
+ */
 export default function Hero(): JSX.Element {
 
   const anchorSocialStyle = "btn my-4 sx:m-2 h-fit hover:text-blue-400 text-lg";
-
 
   return (
     <div className="hero bg-base-300 min-h-screen">
