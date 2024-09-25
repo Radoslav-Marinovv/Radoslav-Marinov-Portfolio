@@ -13,6 +13,6 @@ export const EDUCATION_LIST = [
     degree: 'Bachelor`s degree, Accounting',
     date: '10/2009 - 07/2013',
     location: 'Sofia, Bulgaria',
-    logoImage: '/assets/Images/vuzf.png',
+    logoImage: '/assets/images/vuzf.png',
   },
 ];
