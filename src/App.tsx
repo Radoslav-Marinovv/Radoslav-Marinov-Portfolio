@@ -9,6 +9,7 @@ import ForumTRT from './assets/Images/tasty-recipe-talk.jpg'
 import MotionMate from './assets/Images/motion-mate.jpg'
 import Education from "./components/Education/Education"
 import { EDUCATION_LIST } from "./data/education.ts"
+import MyTechStack from "./components/TechStack/MyTechStack.tsx"
 
 function App() {
 
@@ -16,10 +17,7 @@ function App() {
     <div className="flex flex-col gap-8 ">
       <Hero />
       <Education educationItems={EDUCATION_LIST} />
-      <div className="items-center justify-center max-w-full max-h-full rounded-lg shadow-lg">
-        <h2 className="pb-8 text-4xl font-bold text-center">My Tech Stack</h2>
-        <TechStack all={true} text="" />
-      </div>
+      <MyTechStack />
       <div className="flex flex-col text-center">
         <h2 className="text-4xl font-bold py-8">Projects</h2>
         <div className="flex flex-col p-2 align-middle justify-center items-center">
