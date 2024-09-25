@@ -2,6 +2,10 @@
 import { PROJECTS } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 
+/**
+ * A component that displays information about the projects.
+ * @returns {JSX.Element} The rendered projects component.
+ */
 export default function Projects(): JSX.Element {
   return (
     <div className="flex flex-col text-center">
