@@ -8,13 +8,14 @@ import PortfolioOld from "./assets/Images/portfolio.jpg"
 import ForumTRT from './assets/Images/tasty-recipe-talk.jpg'
 import MotionMate from './assets/Images/motion-mate.jpg'
 import Education from "./components/Education/Education"
+import { EDUCATION_LIST } from "./data/education.ts"
 
 function App() {
 
   return (
     <div className="flex flex-col gap-8 ">
       <Hero />
-      <Education />
+      <Education educationItems={EDUCATION_LIST} />
       <div className="items-center justify-center max-w-full max-h-full rounded-lg shadow-lg">
         <h2 className="pb-8 text-4xl font-bold text-center">My Tech Stack</h2>
         <TechStack all={true} text="" />
