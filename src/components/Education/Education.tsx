@@ -1,5 +1,5 @@
 import EducationItem from "./EducationItem";
-
+import { EDUCATION_LIST } from "../../data/education.ts"
 type EducationItemProps = {
   id: string;
   title: string;
@@ -9,21 +9,17 @@ type EducationItemProps = {
   logoImage: string;
 };
 
-type EducationProps = {
-  educationItems: EducationItemProps[];
-};
-
 /**
  * A component that displays information about the education
  * @param educationItems - an array of objects with information about the education
  * @returns - a list of components that displays information about the education
  */
-export default function Education({ educationItems }: EducationProps): JSX.Element {
+export default function Education(): JSX.Element {
   return (
     <div className="flex flex-col justify-center align-middle text-center">
       <h2 className="text-4xl font-bold py-8">Education</h2>
       <div className="flex flex-wrap justify-center align-baseline">
-        {educationItems.map((item: EducationItemProps) => (
+        {EDUCATION_LIST.map((item: EducationItemProps) => (
           <EducationItem
             key={item.id}
             title={item.title}

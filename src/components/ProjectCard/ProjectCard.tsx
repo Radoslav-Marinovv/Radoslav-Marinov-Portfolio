@@ -1,9 +1,10 @@
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
+import TechStack from "../TechStack/TechStack";
 
 type ProjectCardProps = {
   title: string;
   description: string;
-  techStack: React.ReactNode;
+  techStack: object;
   github: string;
   website?: string;
   image: string;
@@ -33,7 +34,7 @@ export default function ProjectCard({ title, description, techStack, github, web
             {description}
           </p>
           <div className="pt-4 card-bordered card-actions justify-start">
-            {techStack}
+            <TechStack {...techStack} />
           </div>
           <div className="card-bordered card-actions justify-center md:justify-end">
             {website && <fieldset className={FIELDSET_STYLE}>

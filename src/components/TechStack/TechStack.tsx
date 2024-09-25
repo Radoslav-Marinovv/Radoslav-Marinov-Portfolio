@@ -70,7 +70,7 @@ type TechStackProps = {
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "Tech Stack:", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
 
   if (all) {
     js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
