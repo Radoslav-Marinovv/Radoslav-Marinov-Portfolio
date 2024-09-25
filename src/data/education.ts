@@ -5,7 +5,7 @@ export const EDUCATION_LIST = [
     degree: 'JavaScript Alpha Track',
     date: '01/2024 - 06/2024',
     location: 'Sofia, Bulgaria',
-    logoImage: 'src/assets/Images/telerik-academy.svg',
+    logoImage: 'public/assets/images/telerik-academy.svg',
   },
   {
     id: '2',
@@ -13,6 +13,6 @@ export const EDUCATION_LIST = [
     degree: 'Bachelor`s degree, Accounting',
     date: '10/2009 - 07/2013',
     location: 'Sofia, Bulgaria',
-    logoImage: 'src/assets/Images/vuzf.png',
+    logoImage: 'public/assets/Images/vuzf.png',
   },
 ];
