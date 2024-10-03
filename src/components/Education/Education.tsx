@@ -30,10 +30,10 @@ export default function Education(): JSX.Element {
   useGSAP(() => {
     gsap.fromTo(".education",
       {
-        x: gsap.utils.random(-50, 100, 1),
-        y: gsap.utils.random(-50, 100, 1),
-        skewX: gsap.utils.random(-90, 90, 1),
-        skewY: gsap.utils.random(-90, 90, 1),
+        x: gsap.utils.random(-50, 50, 1),
+        y: gsap.utils.random(-50, 50, 1),
+        skewX: gsap.utils.random(-60, 60, 1),
+        skewY: gsap.utils.random(-60, 60, 1),
         opacity: 0,
         scale: 0,
       },
