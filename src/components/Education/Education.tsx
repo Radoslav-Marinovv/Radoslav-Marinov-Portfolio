@@ -41,8 +41,8 @@ export default function Education(): JSX.Element {
         immediateRender: false,
         scrollTrigger: {
           trigger: cardRef.current,
-          start: "top 80%",
-          end: "bottom 60%",
+          start: "top 90%",
+          end: "center 50%",
           scrub: 2.5,
           snap: {
             snapTo: "labelsDirectional",
