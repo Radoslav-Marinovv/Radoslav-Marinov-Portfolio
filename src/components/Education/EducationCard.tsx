@@ -1,6 +1,6 @@
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
-type EducationItemProps = {
+type EducationCardProps = {
   title: string;
   degree: string;
   date: string;
@@ -16,7 +16,7 @@ type EducationItemProps = {
  * @param logoImage - the logo of the educational institution
  * @returns - a card with information about the educational institution
  */
-export default function EducationItem({ title, degree, date, location, logoImage }: EducationItemProps): JSX.Element {
+export default function EducationCard({ title, degree, date, location, logoImage }: EducationCardProps): JSX.Element {
 
   return (
     <div className="card card-bordered m-2 bg-base-300 md:flex-row md:w-2/3 w-full md:max-h-screen shadow-xl my-8 text-left">
