@@ -38,13 +38,25 @@ export default function Education(): JSX.Element {
         scale: 0,
       },
       {
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top 80%",
+          end: "bottom 60%",
+          scrub: 2.5,
+          snap: {
+            snapTo: "labelsDirectional",
+            duration: { min: 0.2, max: 3 },
+            delay: 0.2,
+            ease: "elastic"
+          }
+        },
         x: 0,
         y: 0,
         skewX: 0,
         skewY: 0,
         opacity: 1,
         scale: 1,
-        duration: 2.5,
+        duration: 3.5,
         repeat: 0,
         yoyo: true,
         ease: "elastic",
@@ -56,8 +68,8 @@ export default function Education(): JSX.Element {
   }, { scope: cardRef, revertOnUpdate: true });
 
   return (
-    <div className="flex flex-col justify-center align-middle text-center ">
-      <h2 className="text-4xl font-bold py-8">Education</h2>
+    <div className="flex flex-col justify-center align-middle text-center">
+      <h2 className="text-4xl font-bold pb-8">Education</h2>
       <div ref={cardRef} className="flex flex-wrap justify-center align-baseline">
         {EDUCATION_LIST.map((item: EducationCardProps) => (
           <EducationCard
