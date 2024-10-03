@@ -38,6 +38,7 @@ export default function Education(): JSX.Element {
         scale: 0,
       },
       {
+        immediateRender: false,
         scrollTrigger: {
           trigger: cardRef.current,
           start: "top 80%",
@@ -47,7 +48,7 @@ export default function Education(): JSX.Element {
             snapTo: "labelsDirectional",
             duration: { min: 0.2, max: 3 },
             delay: 0.2,
-            ease: "elastic"
+            ease: "bounce.out",
           }
         },
         x: 0,
