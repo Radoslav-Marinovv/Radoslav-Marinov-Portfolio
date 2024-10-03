@@ -19,7 +19,7 @@ type EducationCardProps = {
 export default function EducationCard({ title, degree, date, location, logoImage }: EducationCardProps): JSX.Element {
 
   return (
-    <div className="card card-bordered m-2 bg-base-300 md:flex-row md:w-2/3 w-full md:max-h-screen shadow-xl my-8 text-left">
+    <div className="card m-2 bg-base-300 md:flex-row md:w-2/3 w-full md:max-h-screen shadow-xl my-8 text-left">
       <figure className="shadow-xl md:hover:w-64 md:max-w-64 p-4">
         <img
           className="rounded-lg w-full h-64
@@ -34,10 +34,10 @@ export default function EducationCard({ title, degree, date, location, logoImage
         <h2 className="card-title">
           {title}
         </h2>
-        <p className="card-bordered font-medium">
+        <p className="font-medium">
           {degree}
         </p>
-        <div className="pt-4 card-bordered card-actions justify-start">
+        <div className="pt-4 card-actions justify-start">
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>Date</legend>
             <p>{date}</p>
