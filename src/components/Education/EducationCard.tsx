@@ -1,3 +1,8 @@
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 
 type EducationCardProps = {
@@ -7,6 +12,7 @@ type EducationCardProps = {
   location: string;
   logoImage: string;
 };
+
 /**
  * A card with information about the educational institution
  * @param title - the name of the educational institution
@@ -18,19 +24,56 @@ type EducationCardProps = {
  */
 export default function EducationCard({ title, degree, date, location, logoImage }: EducationCardProps): JSX.Element {
 
+  const singleCardRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.fromTo(singleCardRef.current,
+      {
+        width: "33%",
+        grid: "auto-flow / 1fr ",
+      },
+      {
+        width: "45%",
+        grid: "auto-flow / 1fr 2fr",
+        opacity: 1,
+        duration: 1,
+      });
+    gsap.fromTo('.picture',
+      {
+        x: 500,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        gridColumn: "1 / 2",
+        opacity: 1,
+        delay: 1.5,
+        stagger: 0.5,
+      });
+    gsap.fromTo('.body',
+      {
+        width: "0%",
+        x: -500,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        delay: 1.5,
+        stagger: 0.5,
+      });
+
+  }, { scope: singleCardRef, revertOnUpdate: true });
+
   return (
-    <div className="education card m-2 bg-base-300 md:flex-row md:w-2/3 w-full md:max-h-screen shadow-xl my-8 text-left">
-      <figure className="shadow-xl md:hover:w-64 md:max-w-64 p-4">
+    <div ref={singleCardRef} className="education card bg-base-300 md:flex-row w-screen md:w-1/3 shadow-xl md:mx-8 my-4 text-sm text-justify">
+      <figure className="picture shadow-xl h-full p-4">
         <img
-          className="rounded-lg w-full h-64
-             md:h-full md:w-64 md:object-contain md:object-center
-             md:hover:top-2 md:hover:left-0 md:hover:z-10 
-             md:hover:w-fit md:hover:object-contain 
-             md:transition-all md:duration-1000 md:hover:scale-105 md:hover:ease-linear"
+          className="rounded-lg w-full md:object-contain md:object-center"
           src={logoImage}
           alt={title + "image"} />
       </figure>
-      <div className="card-body md:w-2/3">
+      <div className="body card-body md:w-2/4">
         <h2 className="card-title">
           {title}
         </h2>
