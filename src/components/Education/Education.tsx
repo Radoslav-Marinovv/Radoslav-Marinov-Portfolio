@@ -28,12 +28,12 @@ export default function Education(): JSX.Element {
   const cardRef = useRef(null);
 
   useGSAP(() => {
-    gsap.fromTo(".education",
+    gsap.fromTo("#educationCard",
       {
-        x: gsap.utils.random(-50, 50, 1),
+        x: gsap.utils.random(-500, 500, 1),
         y: gsap.utils.random(-50, 50, 1),
-        skewX: gsap.utils.random(-60, 60, 1),
-        skewY: gsap.utils.random(-60, 60, 1),
+        skewX: gsap.utils.random(-45, 45, 1),
+        skewY: gsap.utils.random(-45, 45, 1),
         opacity: 0,
         scale: 0,
       },
@@ -69,9 +69,13 @@ export default function Education(): JSX.Element {
   }, { scope: cardRef, revertOnUpdate: true });
 
   return (
-    <div className="flex flex-col justify-center align-middle text-center">
+    <div
+      id="education"
+      ref={cardRef}
+      className="flex flex-col justify-center align-middle text-center"
+    >
       <h2 className="text-4xl font-bold pb-4">Education</h2>
-      <div ref={cardRef} className="flex flex-wrap justify-center align-baseline gap-3">
+      <div className="flex flex-wrap justify-center align-baseline gap-3">
         {EDUCATION_LIST.map((item: EducationCardProps) => (
           <EducationCard
             key={item.id}
