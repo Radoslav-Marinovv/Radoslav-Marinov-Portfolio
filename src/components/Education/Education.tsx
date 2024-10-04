@@ -70,8 +70,8 @@ export default function Education(): JSX.Element {
 
   return (
     <div className="flex flex-col justify-center align-middle text-center">
-      <h2 className="text-4xl font-bold pb-8">Education</h2>
-      <div ref={cardRef} className="flex flex-wrap justify-center align-baseline">
+      <h2 className="text-4xl font-bold pb-4">Education</h2>
+      <div ref={cardRef} className="flex flex-wrap justify-center align-baseline gap-3">
         {EDUCATION_LIST.map((item: EducationCardProps) => (
           <EducationCard
             key={item.id}
