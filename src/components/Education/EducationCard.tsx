@@ -25,16 +25,18 @@ type EducationCardProps = {
 export default function EducationCard({ title, degree, date, location, logoImage }: EducationCardProps): JSX.Element {
 
   const singleCardRef = useRef(null);
-
   useGSAP(() => {
     gsap.fromTo(singleCardRef.current,
       {
         width: "33%",
-        grid: "auto-flow / 1fr ",
+
       },
       {
+        scrollTrigger: {
+          trigger: singleCardRef.current,
+          start: "top 80%",
+        },
         width: "45%",
-        grid: "auto-flow / 1fr 2fr",
         opacity: 1,
         duration: 1,
       });
@@ -66,7 +68,10 @@ export default function EducationCard({ title, degree, date, location, logoImage
   }, { scope: singleCardRef, revertOnUpdate: true });
 
   return (
-    <div ref={singleCardRef} className="education card bg-base-300 md:flex-row w-screen md:w-1/3 shadow-xl md:mx-8 my-4 text-sm text-justify">
+    <div
+      ref={singleCardRef}
+      id="educationCard"
+      className="card bg-base-300 md:flex-row w-screen md:w-1/3 shadow-xl md:mx-8 my-4 text-sm text-justify">
       <figure className="picture shadow-xl h-full p-4">
         <img
           className="rounded-lg w-full md:object-contain md:object-center"
