@@ -8,8 +8,8 @@ import ProjectCard from "./ProjectCard";
  */
 export default function Projects(): JSX.Element {
   return (
-    <div
-      id="projects"
+    <section
+      id="Projects"
       className="flex flex-col text-center">
       <h2 className="text-4xl font-bold py-8">Projects</h2>
       <div className="flex flex-col p-2 align-middle justify-center items-center">
@@ -26,6 +26,6 @@ export default function Projects(): JSX.Element {
         ))}
 
       </div>
-    </div>
+    </section>
   )
 };

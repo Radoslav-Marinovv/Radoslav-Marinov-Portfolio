@@ -69,8 +69,8 @@ export default function Education(): JSX.Element {
   }, { scope: cardRef, revertOnUpdate: true });
 
   return (
-    <div
-      id="education"
+    <section
+      id="Education"
       ref={cardRef}
       className="flex flex-col justify-center align-middle text-center"
     >
@@ -87,6 +87,6 @@ export default function Education(): JSX.Element {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

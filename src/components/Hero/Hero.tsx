@@ -13,8 +13,8 @@ export default function Hero(): JSX.Element {
   const anchorSocialStyle = "btn my-4 sx:m-2 h-fit hover:text-blue-400 text-lg";
 
   return (
-    <div
-      id="info"
+    <section
+      id="Portfolio"
       className="hero bg-base-300 min-h-screen">
       <div className="hero-content max-w-sx w-screen flex-col lg:flex-row">
         <img
@@ -24,7 +24,6 @@ export default function Hero(): JSX.Element {
           className="max-w-sx rounded-lg shadow-2xl" />
         <div>
           <h1
-
             className="text-5xl font-bold"
           >Radoslav Marinov</h1>
           <fieldset className={FIELDSET_STYLE}>
@@ -85,6 +84,6 @@ export default function Hero(): JSX.Element {
           </fieldset>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
