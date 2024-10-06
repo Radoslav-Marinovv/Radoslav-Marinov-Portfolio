@@ -54,7 +54,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
 
   return (
     <>
-      <main className="flex flex-col gap-8">{children}</main>
+      <main className="flex flex-col gap-8 overflow-x-hidden max-w-full">{children}</main>
       <Footer />
     </>
   );
