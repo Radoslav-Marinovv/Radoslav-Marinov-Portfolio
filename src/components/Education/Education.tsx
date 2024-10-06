@@ -7,6 +7,9 @@ import { ScrollTrigger } from "gsap/all";
 import EducationCard from "./EducationCard.tsx";
 import { EDUCATION_LIST } from "../../data/education.ts"
 
+import CertificateFront from "../../assets/images/certificate-front.jpg";
+import CertificateBack from "../../assets/images/certificate-back.jpg";
+
 type EducationCardProps = {
   id: string;
   title: string;
@@ -72,10 +75,10 @@ export default function Education(): JSX.Element {
     <section
       id="Education"
       ref={cardRef}
-      className="flex flex-col justify-center align-middle text-center"
+      className="flex flex-col justify-center align-middle text-center gap-3"
     >
       <h2 className="text-4xl font-bold pb-4">Education</h2>
-      <div className="flex flex-wrap justify-center align-baseline gap-3">
+      <div className="flex flex-wrap justify-center align-baseline gap-2">
         {EDUCATION_LIST.map((item: EducationCardProps) => (
           <EducationCard
             key={item.id}
@@ -86,6 +89,19 @@ export default function Education(): JSX.Element {
             logoImage={item.logoImage}
           />
         ))}
+      </div>
+      <h2 className="text-4xl font-bold pb-4">Certificate</h2>
+      <div className="flex flex-col md:flex-row max-w-full mx-3 gap-4 justify-center align-middle">
+        <img
+          alt="tailwind logo"
+          src={CertificateFront}
+          className=" md:w-1/3"
+        />
+        <img
+          alt="tailwind logo"
+          src={CertificateBack}
+          className=" md:w-1/3"
+        />
       </div>
     </section>
   );
