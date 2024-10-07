@@ -24,8 +24,9 @@ export default function Footer(): JSX.Element {
     <footer className="navbar bg-base-100 sticky bottom-0 left-0 mt-auto z-50">
       <a
         className={`btn btn-ghost md:text-xl ${currentPath === "" && "btn-outline" || currentPath === "#Portfolio" && "btn-outline"}`}
-        href={"/"}
+        href={"/#Portfolio"}
         title="Info"
+        target="_self"
         onClick={() => { document.title = "Radoslav Marinov | Portfolio"; }}
       >
         Info
@@ -34,6 +35,7 @@ export default function Footer(): JSX.Element {
         className={`btn btn-ghost md:text-xl ${currentPath === "#Education" && "btn-outline"}`}
         href={"/#Education"}
         title="Education"
+        target="_self"
         onClick={() => { document.title = "Radoslav Marinov | Education"; }}
       >
         Education
@@ -42,6 +44,7 @@ export default function Footer(): JSX.Element {
         className={`btn btn-ghost md:text-xl ${currentPath === "#Tech-Stack" && "btn-outline"}`}
         href={"/#Tech-Stack"}
         title="Tech-Stack"
+        target="_self"
         onClick={() => { document.title = "Radoslav Marinov | Tech Stack"; }}
       >
         Tech Stack
@@ -50,6 +53,7 @@ export default function Footer(): JSX.Element {
         className={`btn btn-ghost md:text-xl ${currentPath === "#Projects" && "btn-outline"}`}
         href={"/#Projects"}
         title="Projects"
+        target="_self"
         onClick={() => { document.title = "Radoslav Marinov | Projects"; }}
       >
         Projects
