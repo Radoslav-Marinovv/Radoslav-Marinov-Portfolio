@@ -34,7 +34,8 @@ export default function EducationCard({ title, degree, date, location, logoImage
       {
         scrollTrigger: {
           trigger: singleCardRef.current,
-          start: "top 80%",
+          start: "clamp(top 80%)",
+          end: "clamp(bottom 20%)",
         },
         width: "45%",
         opacity: 1,
