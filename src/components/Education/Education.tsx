@@ -64,7 +64,7 @@ export default function Education(): JSX.Element {
     gsap.to("#certificateContent",
       {
         scrollTrigger: {
-          trigger: "#educationContent",
+          trigger: "#certificateContent",
           toggleActions: "restart reverse restart reverse",
         },
         x: 0,
