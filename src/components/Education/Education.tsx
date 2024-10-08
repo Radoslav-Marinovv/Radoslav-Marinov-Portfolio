@@ -49,7 +49,7 @@ export default function Education(): JSX.Element {
         skewY: 0,
         opacity: 1,
         scale: 1,
-        duration: 1.5,
+        duration: 1,
       }
     );
     gsap.from("#certificateContent",
@@ -67,7 +67,6 @@ export default function Education(): JSX.Element {
           trigger: "#certificateContent",
           toggleActions: "restart reverse restart reverse",
           end: "bottom -25%",
-          markers: true,
         },
         x: 0,
         y: 0,
@@ -75,7 +74,7 @@ export default function Education(): JSX.Element {
         skewY: 0,
         opacity: 1,
         scale: 1,
-        duration: 1.5,
+        duration: 1,
       }
     );
 
