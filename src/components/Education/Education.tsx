@@ -42,7 +42,6 @@ export default function Education(): JSX.Element {
         scrollTrigger: {
           trigger: "#educationContent",
           toggleActions: "restart reverse restart reverse",
-          end: "bottom 20%",
         },
         x: 0,
         y: 0,
@@ -67,7 +66,7 @@ export default function Education(): JSX.Element {
         scrollTrigger: {
           trigger: "#certificateContent",
           toggleActions: "restart reverse restart reverse",
-          end: "bottom 20%",
+          end: "bottom 5%",
         },
         x: 0,
         y: 0,
