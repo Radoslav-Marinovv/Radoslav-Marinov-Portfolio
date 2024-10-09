@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import gsap, { random } from "gsap";
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import EducationCard from "./EducationCard.tsx";
