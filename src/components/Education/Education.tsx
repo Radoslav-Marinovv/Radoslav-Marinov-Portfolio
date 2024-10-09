@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import gsap from "gsap";
+import gsap, { random } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import EducationCard from "./EducationCard.tsx";
@@ -27,56 +27,58 @@ export default function Education(): JSX.Element {
 
   const cardRef = useRef(null);
 
+  const randomX = gsap.utils.random(-2000, 2000, 1, true);
+  const randomY = gsap.utils.random(-45, 45, 1, true);
+
   useGSAP(() => {
-    gsap.from("#educationContent",
+    gsap.fromTo("#educationContent",
       {
-        x: gsap.utils.random(-5000, 5000, 1),
-        y: gsap.utils.random(-50, 50, 1),
-        skewX: gsap.utils.random(-45, 45, 1),
-        skewY: gsap.utils.random(-45, 45, 1),
+        x: randomX(),
+        y: randomY(),
+        skewX: 45,
+        skewY: 45,
         opacity: 0,
         scale: 0,
-      });
-    gsap.to("#educationContent",
+      },
       {
+        immediateRender: false,
         scrollTrigger: {
-          trigger: "#educationContent",
+          trigger: "#educationContainer",
           toggleActions: "restart reverse restart reverse",
         },
+        duration: 2.5,
+        ease: "elastic.inOut",
         x: 0,
         y: 0,
         skewX: 0,
         skewY: 0,
         opacity: 1,
         scale: 1,
-        ease: "elastic.inOut",
-        duration: 2.5,
       }
     );
-    gsap.from("#certificateContent",
+    gsap.fromTo("#certificateContent",
       {
-        x: gsap.utils.random(-5000, 5000, 1),
-        y: gsap.utils.random(-50, 50, 1),
-        skewX: gsap.utils.random(-45, 45, 1),
-        skewY: gsap.utils.random(-45, 45, 1),
+        x: randomX(),
+        y: randomY(),
+        skewX: -45,
+        skewY: -45,
         opacity: 0,
         scale: 0,
-      });
-    gsap.to("#certificateContent",
+      },
       {
+        immediateRender: false,
         scrollTrigger: {
-          trigger: "#certificateContainer",
+          trigger: "#certificateContent",
           toggleActions: "restart reverse restart reverse",
-          end: "bottom 10%",
         },
+        duration: 2.5,
+        ease: "elastic.inOut",
         x: 0,
         y: 0,
         skewX: 0,
         skewY: 0,
         opacity: 1,
         scale: 1,
-        ease: "elastic.inOut",
-        duration: 2.5,
       }
     );
 
@@ -88,9 +90,18 @@ export default function Education(): JSX.Element {
       ref={cardRef}
       className="flex flex-col justify-center align-middle text-center gap-3"
     >
-      <div id="educationContainer">
-        <h2 id="educationTitle" className="text-4xl font-bold pb-4">Education</h2>
-        <div id="educationContent" className="flex flex-wrap justify-center align-baseline gap-2">
+      <div
+        id="educationContainer"
+        className=""
+      >
+        <h2
+          id="educationTitle"
+          className="text-4xl font-bold pb-4">
+          Education
+        </h2>
+        <div
+          id="educationContent"
+          className="contentTrigger flex flex-wrap justify-center align-baseline gap-2">
           {EDUCATION_LIST.map((item: EducationCardProps) => (
             <EducationCard
               key={item.id}
@@ -103,9 +114,16 @@ export default function Education(): JSX.Element {
           ))}
         </div>
       </div>
-      <div id="certificateContainer">
-        <h2 id="certificateTitle" className="text-4xl font-bold pb-4">Certificate</h2>
-        <div id="certificateContent" className="flex flex-col md:flex-row max-w-full mx-3 gap-4 justify-center align-middle">
+      <div
+        id="certificateContainer">
+        <h2
+          id="certificateTitle"
+          className="text-4xl font-bold pb-4">
+          Certificate
+        </h2>
+        <div
+          id="certificateContent"
+          className="contentTrigger flex flex-col md:flex-row max-w-full mx-3 gap-4 justify-center align-middle">
           <img
             id="certificateFront"
             alt="certificate front"
