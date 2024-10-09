@@ -49,7 +49,8 @@ export default function Education(): JSX.Element {
         skewY: 0,
         opacity: 1,
         scale: 1,
-        duration: 1,
+        ease: "elastic.inOut",
+        duration: 2.5,
       }
     );
     gsap.from("#certificateContent",
@@ -64,9 +65,9 @@ export default function Education(): JSX.Element {
     gsap.to("#certificateContent",
       {
         scrollTrigger: {
-          trigger: "#certificateContent",
+          trigger: "#certificateContainer",
           toggleActions: "restart reverse restart reverse",
-          end: "bottom -25%",
+          end: "bottom 10%",
         },
         x: 0,
         y: 0,
@@ -74,7 +75,8 @@ export default function Education(): JSX.Element {
         skewY: 0,
         opacity: 1,
         scale: 1,
-        duration: 1,
+        ease: "elastic.inOut",
+        duration: 2.5,
       }
     );
 
@@ -105,14 +107,16 @@ export default function Education(): JSX.Element {
         <h2 id="certificateTitle" className="text-4xl font-bold pb-4">Certificate</h2>
         <div id="certificateContent" className="flex flex-col md:flex-row max-w-full mx-3 gap-4 justify-center align-middle">
           <img
-            alt="tailwind logo"
+            id="certificateFront"
+            alt="certificate front"
             src={CertificateFront}
-            className=" md:w-1/3"
+            className="md:w-1/3"
           />
           <img
-            alt="tailwind logo"
+            id="certificateBack"
+            alt="certificate back"
             src={CertificateBack}
-            className=" md:w-1/3"
+            className="md:w-1/3"
           />
         </div>
       </div>
