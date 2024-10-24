@@ -22,7 +22,7 @@ export default function EducationCard({ title, degree, date, location, logoImage
   return (
     <div
       id="educationCard"
-      className="card bg-base-300 md:flex-row w-screen md:w-1/3 shadow-xl md:mx-8 my-4 text-sm text-justify">
+      className="card bg-base-300 md:flex-row w-screen md:w-1/3 shadow-xl md:mx-8 mx-4 my-4 text-sm text-justify">
       <figure className="picture shadow-xl h-full p-4">
         <img
           className="rounded-lg w-full md:object-contain md:object-center"
