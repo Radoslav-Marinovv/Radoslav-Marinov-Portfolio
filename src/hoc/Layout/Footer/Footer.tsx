@@ -21,7 +21,7 @@ export default function Footer(): JSX.Element {
   }, [currentPath]);
 
   return (
-    <footer className="navbar bg-base-100 sticky bottom-0 left-0 mt-auto z-50">
+    <footer className="navbar bg-base-300 sticky bottom-0 left-0 mt-auto z-50">
       <a
         className={`btn btn-ghost md:text-xl ${currentPath === "" && "btn-outline" || currentPath === "#Portfolio" && "btn-outline"}`}
         href={"/#Portfolio"}
