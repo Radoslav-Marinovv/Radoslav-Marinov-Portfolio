@@ -41,7 +41,7 @@ export default function ProjectCard({ title, description, techStack, github, web
         immediateRender: false,
         scrollTrigger: {
           trigger: projectRef.current,
-          toggleActions: "restart reverse restart reverse",
+          toggleActions: "play reverse play reverse",
         },
         duration: 2.5,
         ease: "elastic.inOut",
