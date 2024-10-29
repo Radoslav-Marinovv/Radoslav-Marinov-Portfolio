@@ -44,7 +44,7 @@ export default function Education(): JSX.Element {
         immediateRender: false,
         scrollTrigger: {
           trigger: "#educationContainer",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "restart reverse restart reverse",
         },
         duration: 2.5,
         ease: "elastic.inOut",
