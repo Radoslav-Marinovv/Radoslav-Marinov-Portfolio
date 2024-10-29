@@ -1,5 +1,10 @@
+import { useRef } from "react";
+
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 import TechStack from "../TechStack/TechStack";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 type ProjectCardProps = {
   title: string;
@@ -23,9 +28,37 @@ type ProjectCardProps = {
  */
 export default function ProjectCard({ title, description, techStack, github, website, image }: ProjectCardProps): JSX.Element {
 
+  const projectRef = useRef(null);
+  useGSAP(() => {
+    gsap.fromTo(projectRef.current,
+      {
+        x: -2000,
+        y: 0,
+        opacity: 0,
+        scale: 0,
+      },
+      {
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: projectRef.current,
+          toggleActions: "restart reverse restart reverse",
+        },
+        duration: 2.5,
+        ease: "elastic.inOut",
+        x: 0,
+        y: 0,
+        opacity: 1,
+        stagger: 0.5,
+        scale: 1,
+      }
+    );
+  }, { scope: projectRef, revertOnUpdate: true });
   return (
     <>
-      <div className="card md:flex-row odd:bg-base-300 bg-base-200 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
+      <div
+        id="projectCard"
+        ref={projectRef}
+        className="card md:flex-row odd:bg-base-300 bg-base-200 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
         <figure className="rounded-lg shadow-xl md:hover:w-64 md:max-w-64">
           <img
             className="rounded-lg w-full h-64
