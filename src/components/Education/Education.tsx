@@ -44,7 +44,7 @@ export default function Education(): JSX.Element {
         immediateRender: false,
         scrollTrigger: {
           trigger: "#educationContainer",
-          toggleActions: "restart reverse restart reverse",
+          toggleActions: "play none none none",
         },
         duration: 2.5,
         ease: "elastic.inOut",
@@ -69,7 +69,7 @@ export default function Education(): JSX.Element {
         immediateRender: false,
         scrollTrigger: {
           trigger: "#certificateContent",
-          toggleActions: "restart reverse restart reverse",
+          toggleActions: "play none none none",
         },
         duration: 2.5,
         ease: "elastic.inOut",
