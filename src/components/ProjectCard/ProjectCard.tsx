@@ -58,7 +58,7 @@ export default function ProjectCard({ title, description, techStack, github, web
       <div
         id="projectCard"
         ref={projectRef}
-        className="card md:flex-row odd:bg-base-300 bg-base-200 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
+        className="relative -left[2000px] top-0 card md:flex-row odd:bg-base-300 bg-base-200 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
         <figure className="rounded-lg shadow-xl md:hover:w-64 md:max-w-64">
           <img
             className="rounded-lg w-full h-64
