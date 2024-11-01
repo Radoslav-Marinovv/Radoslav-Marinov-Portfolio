@@ -24,8 +24,9 @@ export default function Hero(): JSX.Element {
           className="max-w-sx rounded-lg shadow-2xl" />
         <div>
           <h1
-            className="text-5xl font-bold"
-          >Radoslav Marinov</h1>
+            className="text-outline md:text-5xl text-4xl font-bold lg:text-start text-center">
+            Radoslav Marinov
+          </h1>
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>Software Developer</legend>
             <p className="p-6">

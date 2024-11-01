@@ -16,6 +16,10 @@ h1 {
   font-size: 2rem;
 }
 
+.text-outline {
+  -webkit-text-stroke: 0.5px #e2f02362;
+}
+
 .list {
   transform-style: preserve-3d;
   transform: perspective(2500px);
