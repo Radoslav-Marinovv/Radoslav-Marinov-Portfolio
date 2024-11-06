@@ -80,7 +80,7 @@ export default function ProjectCard({ title, description, techStack, github, web
           <div className="pt-4 card-actions justify-start">
             <TechStack {...techStack} />
           </div>
-          <div className="card-actions justify-center md:justify-end">
+          <div className="grid grid-cols-1 card-actions justify-center md:justify-end">
             {website && <fieldset className={FIELDSET_STYLE}>
               <legend className={LEGEND_STYLE}>Website</legend>
               <a
