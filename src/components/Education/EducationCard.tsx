@@ -39,7 +39,7 @@ export default function EducationCard({ title, degree, date, location, logoImage
         <div className="grid grid-cols-1 card-actions justify-between">
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>Date</legend>
-            <p className="p-4 ">{date}</p>
+            <p className="p-4">{date}</p>
           </fieldset>
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>Location</legend>
