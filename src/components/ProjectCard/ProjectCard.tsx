@@ -61,6 +61,9 @@ export default function ProjectCard({ title, description, techStack, github, web
     const pictureEl = projectPictureRef.current;
     const figureEl = figureRef.current;
 
+    const windowScale = window.innerWidth >= 768 ? 0.95 : 1;
+    const windowWidth = window.innerWidth >= 768 ? "50%" : "100%";
+
     const onFigureHoverStart = () => {
       gsap.to(figureEl, {
         duration: 1.5,
@@ -73,10 +76,10 @@ export default function ProjectCard({ title, description, techStack, github, web
     };
     const onFigureMouseLeave = () => {
       gsap.to(figureEl, {
-        scale: 0.95,
+        scale: windowScale,
         duration: 1.5,
-        width: "50%",
-        height: "50%",
+        width: windowWidth,
+        height: windowWidth,
         border: "none",
         ease: "power2.out",
       });
@@ -93,7 +96,7 @@ export default function ProjectCard({ title, description, techStack, github, web
 
     const onPictureMouseLeave = () => {
       gsap.to(pictureEl, {
-        scale: 0.95,
+        scale: windowScale,
         duration: 1.5,
         objectFit: "cover",
         ease: "power2.out",
