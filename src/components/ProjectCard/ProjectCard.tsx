@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { FIELDSET_STYLE, LEGEND_STYLE } from "../../common/constants";
 import TechStack from "../TechStack/TechStack";
@@ -28,7 +28,10 @@ type ProjectCardProps = {
  */
 export default function ProjectCard({ title, description, techStack, github, website, image }: ProjectCardProps): JSX.Element {
 
+  const figureRef = useRef(null);
   const projectRef = useRef(null);
+  const projectPictureRef = useRef(null);
+
   useGSAP(() => {
     gsap.fromTo(projectRef.current,
       {
@@ -53,25 +56,84 @@ export default function ProjectCard({ title, description, techStack, github, web
       }
     );
   }, { scope: projectRef, revertOnUpdate: true });
+
+  useEffect(() => {
+    const pictureEl = projectPictureRef.current;
+    const figureEl = figureRef.current;
+
+    const onFigureHoverStart = () => {
+      gsap.to(figureEl, {
+        duration: 1.5,
+        width: "100%",
+        height: "100%",
+        scale: 1.2,
+        border: "1px solid #e2f02362",
+        ease: "back.out(1.7)",
+      });
+    };
+    const onFigureMouseLeave = () => {
+      gsap.to(figureEl, {
+        scale: 0.95,
+        duration: 1.5,
+        width: "50%",
+        height: "50%",
+        border: "none",
+        ease: "power2.out",
+      });
+    }
+
+    const onPictureHoverStart = () => {
+      gsap.to(pictureEl, {
+        scale: 1,
+        objectFit: "cover",
+        duration: 1.5,
+        ease: "power2.out",
+      });
+    };
+
+    const onPictureMouseLeave = () => {
+      gsap.to(pictureEl, {
+        scale: 0.95,
+        duration: 1.5,
+        objectFit: "cover",
+        ease: "power2.out",
+      });
+    };
+
+    if (!figureEl) return;
+    figureEl.addEventListener("mouseenter", onFigureHoverStart);
+    figureEl.addEventListener("mouseleave", onFigureMouseLeave);
+
+    if (!pictureEl) return;
+    pictureEl.addEventListener("mouseenter", onPictureHoverStart);
+    pictureEl.addEventListener("mouseleave", onPictureMouseLeave);
+
+    return () => {
+      figureEl.removeEventListener("mouseenter", onFigureHoverStart);
+      figureEl.removeEventListener("mouseleave", onFigureMouseLeave);
+      pictureEl.removeEventListener("mouseenter", onPictureHoverStart);
+      pictureEl.removeEventListener("mouseleave", onPictureMouseLeave);
+    };
+  }, []);
+
   return (
     <>
       <div
         id="projectCard"
         ref={projectRef}
-        className="card md:flex-row odd:bg-base-300 bg-base-200 md:w-2/3 w-full md:max-h-screen shadow-xl my-8">
-        <figure className="rounded-lg shadow-xl md:hover:w-64 md:max-w-64">
+        className="card md:flex-row odd:bg-base-300 bg-base-200 w-4/5 shadow-xl my-8">
+        <figure
+          ref={figureRef}
+          className="rounded-lg mt-4 self-center md:min-h-[50%] md:min-w-[50%] w-full z-50">
           <img
-            className="rounded-lg w-full h-64
-             md:h-full md:w-64 md:object-cover
-             md:hover:absolute md:hover:top-2 md:hover:left-0 md:hover:z-10 
-             md:hover:w-fit md:hover:object-contain
-             md:hover:rounded-lg md:hover:shadow-2xl  
-             md:transition-all md:duration-1000 md:hover:scale-125 md:hover:ease-linear"
+            ref={projectPictureRef}
+            className="rounded-lg md:h-full h-[50%] md:w-fit w-full md:object-cover object-fill md:scale-95"
             src={image}
-            alt={title + "image"} />
+            alt={`${title} image`}
+          />
         </figure>
         <div className="card-body md:w-2/3">
-          <h2 className="card-title">
+          <h2 className="card-title text-primary">
             {title}
           </h2>
           <p className="font-medium text-justify">
@@ -105,6 +167,5 @@ export default function ProjectCard({ title, description, techStack, github, web
         </div>
       </div>
     </>
-
   )
 };
