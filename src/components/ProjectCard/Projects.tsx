@@ -12,7 +12,7 @@ export default function Projects(): JSX.Element {
       id="Projects"
       className="flex flex-col text-center">
       <h2 className="text-4xl font-bold py-8">Projects</h2>
-      <div className="flex flex-col p-2 mb-4 align-middle justify-center items-center">
+      <div className="flex flex-col p-2 mb-14 align-middle justify-center items-center">
         {PROJECTS.map((project) => (
           <ProjectCard
             key={project.id}
