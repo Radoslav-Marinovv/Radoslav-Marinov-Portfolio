@@ -92,7 +92,6 @@ export default function Education(): JSX.Element {
     >
       <div
         id="educationContainer"
-        className=""
       >
         <h2
           id="educationTitle"
@@ -118,7 +117,7 @@ export default function Education(): JSX.Element {
         id="certificateContainer">
         <h2
           id="certificateTitle"
-          className="text-4xl font-bold pb-4">
+          className="text-4xl font-bold pb-4 mb-4">
           Certificate
         </h2>
         <div
