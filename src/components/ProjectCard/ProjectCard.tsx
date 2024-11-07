@@ -28,9 +28,9 @@ type ProjectCardProps = {
  */
 export default function ProjectCard({ title, description, techStack, github, website, image }: ProjectCardProps): JSX.Element {
 
-  const figureRef = useRef(null);
-  const projectRef = useRef(null);
-  const projectPictureRef = useRef(null);
+  const figureRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const projectPictureRef = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {
     gsap.fromTo(projectRef.current,
@@ -100,19 +100,17 @@ export default function ProjectCard({ title, description, techStack, github, web
       });
     };
 
-    if (!figureEl) return;
-    figureEl.addEventListener("mouseenter", onFigureHoverStart);
-    figureEl.addEventListener("mouseleave", onFigureMouseLeave);
+    figureEl?.addEventListener("mouseenter", onFigureHoverStart);
+    figureEl?.addEventListener("mouseleave", onFigureMouseLeave);
 
-    if (!pictureEl) return;
-    pictureEl.addEventListener("mouseenter", onPictureHoverStart);
-    pictureEl.addEventListener("mouseleave", onPictureMouseLeave);
+    pictureEl?.addEventListener("mouseenter", onPictureHoverStart);
+    pictureEl?.addEventListener("mouseleave", onPictureMouseLeave);
 
     return () => {
-      figureEl.removeEventListener("mouseenter", onFigureHoverStart);
-      figureEl.removeEventListener("mouseleave", onFigureMouseLeave);
-      pictureEl.removeEventListener("mouseenter", onPictureHoverStart);
-      pictureEl.removeEventListener("mouseleave", onPictureMouseLeave);
+      figureEl?.removeEventListener("mouseenter", onFigureHoverStart);
+      figureEl?.removeEventListener("mouseleave", onFigureMouseLeave);
+      pictureEl?.removeEventListener("mouseenter", onPictureHoverStart);
+      pictureEl?.removeEventListener("mouseleave", onPictureMouseLeave);
     };
   }, []);
 
