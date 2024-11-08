@@ -30,6 +30,7 @@ export default function ProjectCard({ title, description, techStack, github, web
 
   const figureRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
+  const projectBodyRef = useRef<HTMLDivElement>(null);
   const projectPictureRef = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {
@@ -58,11 +59,11 @@ export default function ProjectCard({ title, description, techStack, github, web
   }, { scope: projectRef, revertOnUpdate: true });
 
   useEffect(() => {
-    const pictureEl = projectPictureRef.current;
     const figureEl = figureRef.current;
+    const projectBodyEl = projectBodyRef.current;
+    const pictureEl = projectPictureRef.current;
 
-    const windowScale = window.innerWidth >= 768 ? 0.95 : 1;
-    const windowWidth = window.innerWidth >= 768 ? "50%" : "100%";
+    const bigOrSmallScreen = window.innerWidth >= 768 ? true : false;
 
     const onFigureHoverStart = () => {
       gsap.to(figureEl, {
@@ -73,14 +74,26 @@ export default function ProjectCard({ title, description, techStack, github, web
         border: "1px solid #e2f02362",
         ease: "back.out(1.7)",
       });
+
+      gsap.to(projectBodyEl, {
+        margin: bigOrSmallScreen ? "6rem" : "0",
+        duration: 1.5,
+        ease: "power2.out",
+      })
+
     };
     const onFigureMouseLeave = () => {
       gsap.to(figureEl, {
-        scale: windowScale,
+        scale: bigOrSmallScreen ? 0.95 : 1,
         duration: 1.5,
-        width: windowWidth,
-        height: windowWidth,
+        width: bigOrSmallScreen ? "50%" : "100%",
+        height: bigOrSmallScreen ? "50%" : "100%",
         border: "none",
+        ease: "power2.out",
+      });
+      gsap.to(projectBodyEl, {
+        margin: "0",
+        duration: 1.5,
         ease: "power2.out",
       });
     }
@@ -96,7 +109,7 @@ export default function ProjectCard({ title, description, techStack, github, web
 
     const onPictureMouseLeave = () => {
       gsap.to(pictureEl, {
-        scale: windowScale,
+        scale: bigOrSmallScreen ? 0.95 : 1,
         duration: 1.5,
         objectFit: "cover",
         ease: "power2.out",
@@ -133,7 +146,9 @@ export default function ProjectCard({ title, description, techStack, github, web
             alt={`${title} image`}
           />
         </figure>
-        <div className="card-body md:w-2/3">
+        <div
+          ref={projectBodyRef}
+          className="card-body md:w-2/3">
           <h2 className="card-title text-primary">
             {title}
           </h2>
