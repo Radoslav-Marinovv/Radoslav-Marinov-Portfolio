@@ -45,6 +45,7 @@ export default function ProjectCard({ title, description, techStack, github, web
         scrollTrigger: {
           trigger: projectRef.current,
           toggleActions: "play none none none",
+          start: "top 90%",
         },
         duration: 2.5,
         ease: "elastic.inOut",
@@ -122,7 +123,7 @@ export default function ProjectCard({ title, description, techStack, github, web
       <div
         id="projectCard"
         ref={projectRef}
-        className="card md:flex-row odd:bg-base-300 bg-base-200 w-4/5 shadow-xl my-8">
+        className="card md:flex-row odd:md:flex-row-reverse odd:bg-base-300 bg-base-200 w-4/5 opacity-0 shadow-xl my-8">
         <figure
           ref={figureRef}
           className="rounded-lg mt-4 self-center md:min-h-[50%] md:min-w-[50%] w-full z-50">
@@ -137,7 +138,7 @@ export default function ProjectCard({ title, description, techStack, github, web
           <h2 className="card-title text-primary">
             {title}
           </h2>
-          <p className="font-medium text-justify">
+          <p className="font-medium text-left">
             {description}
           </p>
           <div className="pt-4 card-actions justify-start">
