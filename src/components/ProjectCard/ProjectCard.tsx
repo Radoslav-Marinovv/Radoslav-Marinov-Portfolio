@@ -45,7 +45,6 @@ export default function ProjectCard({ title, description, techStack, github, web
         scrollTrigger: {
           trigger: projectRef.current,
           toggleActions: "play none none none",
-          start: "top 90%",
         },
         duration: 2.5,
         ease: "elastic.inOut",
