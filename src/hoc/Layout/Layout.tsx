@@ -2,6 +2,8 @@ import { useEffect, useLayoutEffect, useState } from "react"
 
 import Footer from "./Footer/Footer";
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 type LayoutProps = {
   children: React.ReactNode;
 };
@@ -56,6 +58,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
     <>
       <main className="flex flex-col gap-8 overflow-x-hidden max-w-full">{children}</main>
       <Footer />
+      <SpeedInsights />
     </>
   );
 }
