@@ -35,7 +35,7 @@ export const PROJECTS = [
     id: '3',
     title: 'Groshev & Partners',
     description:
-      "Took part in leading the communication with the client, planned the technologies that best met the client's requirements, and determined the necessary steps to meet the client's criteria.",
+      "Led client communication to understand and refine project requirements, planned the optimal technologies for the project, and outlined the steps needed to meet the client's criteria.",
     techStack: {
       next: true,
       react: true,
