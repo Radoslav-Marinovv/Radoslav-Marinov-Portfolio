@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    id: '7',
+    id: '8',
     title: 'Currency Converter',
     description:
       'Convert from USD (Base) to 33 other currencies, learned a lot from it. Redux, Express.js, the new TailwindCSS(v4) implementation for the first time here. Learned how to use Vercel configuration file so i can run both front-end and back-end (as Vercel function) on same deployment.',
@@ -18,6 +18,20 @@ export const PROJECTS = [
     github: 'https://github.com/Radoslav-Marinovv/currency-converter',
     website: 'https://currency-converter-brown-rho.vercel.app/',
     image: './assets/images/projects/currency-converter.jpg',
+  },
+  {
+    id: '7',
+    title: 'Simple Slot Node TS',
+    description:
+      'A Node.js project that simulates a simple slot machine and logs the output to the console.',
+    techStack: {
+      node: true,
+      ts: true,
+    },
+    github:
+      'https://github.com/Radoslav-Marinovv/Simple-Slot-Node-TS?tab=readme-ov-file#simple-slot-node-ts',
+    image:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg',
   },
   {
     id: '6',
