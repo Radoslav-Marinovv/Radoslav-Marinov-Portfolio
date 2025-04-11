@@ -1,24 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/"
-    },
-    {
-      "source": "/#Portfolio",
-      "destination": "/#Portfolio"
-    },
-    {
-      "source": "/#Education",
-      "destination": "/#Education"
-    },
-    {
-      "source": "/#Projects",
-      "destination": "/#Projects"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/error"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
