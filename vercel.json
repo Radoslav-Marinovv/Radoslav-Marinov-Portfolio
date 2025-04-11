@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/#Portfolio",
+      "destination": "/#Portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/#Education",
+      "destination": "/#Education",
+      "permanent": true
+    },
+    {
+      "source": "/#Projects",
+      "destination": "/#Projects",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "destination": "/error"
+    }
+  ]
+}
