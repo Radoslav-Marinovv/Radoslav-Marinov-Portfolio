@@ -2,23 +2,19 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/",
-      "permanent": true
+      "destination": "/"
     },
     {
       "source": "/#Portfolio",
-      "destination": "/#Portfolio",
-      "permanent": true
+      "destination": "/#Portfolio"
     },
     {
       "source": "/#Education",
-      "destination": "/#Education",
-      "permanent": true
+      "destination": "/#Education"
     },
     {
       "source": "/#Projects",
-      "destination": "/#Projects",
-      "permanent": true
+      "destination": "/#Projects"
     },
     {
       "source": "/:path*",
