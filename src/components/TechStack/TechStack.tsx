@@ -1,5 +1,3 @@
-import TailwindImage from "../../assets/images/tailwind-css-logo.svg";
-import JsonImage from "../../assets/images/JSON.png";
 import MomentJSLogo from '../../assets/images/moment-js.svg';
 import BloggerLogo from '../../assets/images/blogger.png';
 import DaisyUILogo from '../../assets/images/daisyui.png';
@@ -14,6 +12,7 @@ type TechStackProps = {
   js?: boolean;
   ts?: boolean;
   react?: boolean;
+  redux?: boolean;
   next?: boolean;
   node?: boolean;
   firebase?: boolean;
@@ -31,6 +30,8 @@ type TechStackProps = {
   nextra?: boolean;
   mdx?: boolean;
   chakraui?: boolean;
+  mongodb?: boolean;
+  express?: boolean;
 };
 /**
  * Renders a tech stack component with customizable options.
@@ -42,6 +43,7 @@ type TechStackProps = {
  * @param {boolean} [props.js=false] - Flag indicating whether to display JavaScript logo.
  * @param {boolean} [props.ts=false] - Flag indicating whether to display TypeScript logo.
  * @param {boolean} [props.react=false] - Flag indicating whether to display React logo.
+ * @param {boolean} [props.redux=false] - Flag indicating whether to display Redux logo.
  * @param {boolean} [props.next=false] - Flag indicating whether to display Next.js logo.
  * @param {boolean} [props.node=false] - Flag indicating whether to display Node.js logo.
  * @param {boolean} [props.firebase=false] - Flag indicating whether to display Firebase logo.
@@ -59,6 +61,8 @@ type TechStackProps = {
  * @param {boolean} [props.nextra=false] - Flag indicating whether to display Nextra logo.
  * @param {boolean} [props.mdx=false] - Flag indicating whether to display MDX logo.
  * @param {boolean} [props.chakraui=false] - Flag indicating whether to display Chakra UI logo.
+ * @param {boolean} [props.mongodb=false] - Flag indicating whether to display MongoDB logo.
+ * @param {boolean} [props.express=false] - Flag indicating whether to display Express logo.
  * 
  * @example
  * // Display all tech stack logos.
@@ -70,10 +74,10 @@ type TechStackProps = {
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, next = false, node = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, redux = false, next = false, node = false, express = false, mongodb = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
 
   if (all) {
-    js = ts = react = next = node = firebase = jest = csharp = html = css = github = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
+    js = ts = react = redux = next = node = express = mongodb = firebase = jest = csharp = html = css = github = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
   }
 
   const techDivStyle = "dropdown dropdown-hover mb-8 p-2 item";
@@ -104,6 +108,13 @@ export default function TechStack({ text = "", width = 70, all = false, js = fal
         </div>
       }
 
+      {redux &&
+        <div className={techDivStyle}>
+          <img width={width} alt="redux logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
+          <p className={techNameStyle}>Redux</p>
+        </div>
+      }
+
       {next &&
         <div className={techDivStyle}>
           <img width={width} alt="next logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" />
@@ -116,6 +127,21 @@ export default function TechStack({ text = "", width = 70, all = false, js = fal
           <img width={width} alt="node logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
           <p className={techNameStyle}>Node.js</p>
         </div>
+      }
+
+      {express &&
+        <div className={techDivStyle}>
+          <img width={width} alt="express logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+          <p className={techNameStyle}>Express</p>
+        </div>
+      }
+
+      {mongodb &&
+        <div className={techDivStyle}>
+          <img width={width} alt="mongodb logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+          <p className={techNameStyle}>MongoDB</p>
+        </div>
+
       }
 
       {firebase &&
@@ -167,10 +193,9 @@ export default function TechStack({ text = "", width = 70, all = false, js = fal
         </div>
       }
 
-
       {tailwind &&
         <div className={techDivStyle}>
-          <img width={width} alt="tailwind logo" src={TailwindImage} />
+          <img width={width} alt="tailwind logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" />
           <p className={techNameStyle}>TailwindCSS</p>
         </div>
       }
@@ -191,7 +216,7 @@ export default function TechStack({ text = "", width = 70, all = false, js = fal
 
       {json &&
         <div className={techDivStyle}>
-          <img width={width} alt="json logo" src={JsonImage} />
+          <img width={width} alt="json logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" />
           <p className={techNameStyle}>JSON</p>
         </div>
       }
