@@ -31,7 +31,7 @@ export const PROJECTS = [
     github:
       'https://github.com/Radoslav-Marinovv/Simple-Slot-Node-TS?tab=readme-ov-file#simple-slot-node-ts',
     image:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/330px-Node.js_logo.svg.png',
   },
   {
     id: '6',
@@ -103,7 +103,7 @@ export const PROJECTS = [
     id: '2',
     title: 'Tic Tac Toe',
     description:
-      'Tic tac toe game written on React with Type Script and deployed on Github Pages.',
+      'React project: Tic Tac Toe game hosted on GitHub-pages created with arrays for the game logic. The game is played by two players, and the winner is determined by checking the winning combinations.',
     techStack: { react: true, ts: true, tailwind: true },
     github: 'https://github.com/Radoslav-Marinovv/react-ts-tic-tac-toe',
     website: 'https://radoslav-marinovv.github.io/react-ts-tic-tac-toe/',
