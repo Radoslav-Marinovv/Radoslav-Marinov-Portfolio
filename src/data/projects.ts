@@ -23,7 +23,7 @@ export const PROJECTS = [
     id: '7',
     title: 'Simple Slot Node TS',
     description:
-      'A Node.js project that simulates a simple slot machine and logs the output to the console.',
+      'A Node.js project that simulates simple slot machine and present the output to the console. The project is built with TypeScript and uses the Node.js runtime environment.',
     techStack: {
       node: true,
       ts: true,
