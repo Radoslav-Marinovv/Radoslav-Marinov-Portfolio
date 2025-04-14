@@ -60,73 +60,29 @@ export default function ProjectCard({ title, description, techStack, github, web
 
   useEffect(() => {
     const figureEl = figureRef.current;
-    const projectBodyEl = projectBodyRef.current;
-    const pictureEl = projectPictureRef.current;
-
-    const bigOrSmallScreen = window.innerWidth >= 768 ? true : false;
 
     const onFigureHoverStart = () => {
       gsap.to(figureEl, {
         duration: 1.5,
-        width: "100%",
-        height: "100%",
-        scale: 1.2,
+        scale: 1.3,
         border: "1px solid #e2f02362",
         ease: "back.out(1.7)",
       });
-
-      gsap.to(projectBodyEl, {
-        margin: bigOrSmallScreen ? "6rem" : "0",
-        duration: 1.5,
-        ease: "power2.out",
-      })
-
     };
     const onFigureMouseLeave = () => {
       gsap.to(figureEl, {
-        scale: bigOrSmallScreen ? 0.95 : 1,
+        scale: 1,
         duration: 1.5,
-        width: bigOrSmallScreen ? "50%" : "100%",
-        height: bigOrSmallScreen ? "50%" : "100%",
-        border: "none",
-        ease: "power2.out",
-      });
-      gsap.to(projectBodyEl, {
-        margin: "0",
-        duration: 1.5,
+        border: "1px solid transparent",
         ease: "power2.out",
       });
     }
-
-    const onPictureHoverStart = () => {
-      gsap.to(pictureEl, {
-        scale: 1,
-        objectFit: "cover",
-        duration: 1.5,
-        ease: "power2.out",
-      });
-    };
-
-    const onPictureMouseLeave = () => {
-      gsap.to(pictureEl, {
-        scale: bigOrSmallScreen ? 0.95 : 1,
-        duration: 1.5,
-        objectFit: "cover",
-        ease: "power2.out",
-      });
-    };
-
     figureEl?.addEventListener("mouseenter", onFigureHoverStart);
     figureEl?.addEventListener("mouseleave", onFigureMouseLeave);
-
-    pictureEl?.addEventListener("mouseenter", onPictureHoverStart);
-    pictureEl?.addEventListener("mouseleave", onPictureMouseLeave);
 
     return () => {
       figureEl?.removeEventListener("mouseenter", onFigureHoverStart);
       figureEl?.removeEventListener("mouseleave", onFigureMouseLeave);
-      pictureEl?.removeEventListener("mouseenter", onPictureHoverStart);
-      pictureEl?.removeEventListener("mouseleave", onPictureMouseLeave);
     };
   }, []);
 
@@ -135,7 +91,7 @@ export default function ProjectCard({ title, description, techStack, github, web
       <div
         id="projectCard"
         ref={projectRef}
-        className="card md:flex-row odd:md:flex-row-reverse odd:bg-base-300 bg-base-200 w-4/5 opacity-0 shadow-xl my-8">
+        className="card md:flex-row odd:md:flex-row-reverse odd:bg-base-300 bg-base-200 w-4/5 shadow-xl my-8">
         <figure
           ref={figureRef}
           className="rounded-lg mt-4 self-center md:min-h-[50%] md:min-w-[50%] w-full z-50">
@@ -156,7 +112,7 @@ export default function ProjectCard({ title, description, techStack, github, web
             {description}
           </p>
           <div className="pt-4 card-actions justify-start">
-            <TechStack {...techStack} />
+            <TechStack {...techStack} width={50} />
           </div>
           <div className="grid grid-cols-1 card-actions justify-center md:justify-end">
             {website && <fieldset className={FIELDSET_STYLE}>
