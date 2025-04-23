@@ -30,10 +30,9 @@ export default function Hero(): JSX.Element {
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>Software Developer</legend>
             <p className="p-6">
-              I am a software developer with a passion for web development. I have experience with JavaScript, TypeScript, React, Next.js, Node.js, and Firebase. I am also familiar with C# and have experience with HTML, CSS, and Git.
+              I am a software developer with a passion for web development. I have experience with JavaScript, TypeScript, React, Next.js, Node.js, MongoDB and Firebase. I am also familiar with C# and have experience with HTML, CSS, and Git.
             </p>
           </fieldset>
-
           <fieldset className={FIELDSET_STYLE}>
             <legend className={LEGEND_STYLE}>You can find me here</legend>
             <div className="flex flex-wrap justify-evenly align-baseline ">
