@@ -13,6 +13,7 @@ type TechStackProps = {
   ts?: boolean;
   react?: boolean;
   redux?: boolean;
+  zustand?: boolean;
   next?: boolean;
   node?: boolean;
   firebase?: boolean;
@@ -45,6 +46,7 @@ type TechStackProps = {
  * @param {boolean} [props.ts=false] - Flag indicating whether to display TypeScript logo.
  * @param {boolean} [props.react=false] - Flag indicating whether to display React logo.
  * @param {boolean} [props.redux=false] - Flag indicating whether to display Redux logo.
+ * @param {boolean} [props.zustand=false] - Flag indicating whether to display Zustand logo.
  * @param {boolean} [props.next=false] - Flag indicating whether to display Next.js logo.
  * @param {boolean} [props.node=false] - Flag indicating whether to display Node.js logo.
  * @param {boolean} [props.firebase=false] - Flag indicating whether to display Firebase logo.
@@ -76,10 +78,10 @@ type TechStackProps = {
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, redux = false, next = false, node = false, express = false, mongodb = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, figma = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, redux = false, zustand = false, next = false, node = false, express = false, mongodb = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, figma = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
 
   if (all) {
-    js = ts = react = redux = next = node = express = mongodb = firebase = jest = csharp = html = css = github = figma = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
+    js = ts = react = redux = zustand = next = node = express = mongodb = firebase = jest = csharp = html = css = github = figma = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
   }
 
   const techDivStyle = "dropdown dropdown-hover item";
@@ -114,6 +116,13 @@ export default function TechStack({ text = "", width = 70, all = false, js = fal
         <div className={techDivStyle}>
           <img width={width} alt="redux logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
           <p className={techNameStyle}>Redux</p>
+        </div>
+      }
+
+      {zustand &&
+        <div className={techDivStyle}>
+          <img width={width} alt="zustand logo" src="https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg" />
+          <p className={techNameStyle}>Zustand</p>
         </div>
       }
 
