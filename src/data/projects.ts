@@ -1,5 +1,23 @@
 export const PROJECTS = [
   {
+    id: '9',
+    title: 'Currency Converter',
+    description:
+      "Todo application with Next.js and Zustand - no database, all todo's are stored at local-storage. Have TODO | ONGOING | DONE columns, all todo tickets can be dragged to different column.",
+    techStack: {
+      react: true,
+      js: true,
+      ts: true,
+      next: true,
+      zustand: true,
+      tailwind: true,
+      json: true,
+    },
+    github: 'https://github.com/Radoslav-Marinovv/todo-next-zustand',
+    website: 'https://todo-next-zustand-blue.vercel.app/',
+    image: './assets/images/projects/todo-zustand.jpg',
+  },
+  {
     id: '8',
     title: 'Currency Converter',
     description:
