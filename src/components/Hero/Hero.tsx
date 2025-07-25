@@ -48,13 +48,13 @@ export default function Hero(): JSX.Element {
                   +359 888 788 687
                 </a>
                 <a
-                  href="mailto:radoslav.marinov89@gmail.com"
+                  href="mailto:radoslav.a.marinov@gmail.com"
                   className={anchorSocialStyle}>
                   <img
                     className="w-8 h-8"
                     src={mailLogo}
                     alt="gmail logo" />
-                  radoslav.marinov89@gmail.com
+                  radoslav.a.marinov@gmail.com
                 </a>
               </div>
               <div className="lg:w-1/2 pl-2">

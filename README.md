@@ -55,4 +55,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions, please contact Radoslav Marinov at [radoslav.marinov89@gmail.com](mailto:radoslav.marinov89@gmail.com).
+For any questions, please contact Radoslav Marinov at [radoslav.a.marinov@gmail.com](mailto:radoslav.a.marinov@gmail.com).
