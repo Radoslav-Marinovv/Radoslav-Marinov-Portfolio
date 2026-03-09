@@ -17,6 +17,7 @@ type TechStackProps = {
   next?: boolean;
   node?: boolean;
   firebase?: boolean;
+  prisma?: boolean;
   jest?: boolean;
   csharp?: boolean;
   html?: boolean;
@@ -50,6 +51,7 @@ type TechStackProps = {
  * @param {boolean} [props.next=false] - Flag indicating whether to display Next.js logo.
  * @param {boolean} [props.node=false] - Flag indicating whether to display Node.js logo.
  * @param {boolean} [props.firebase=false] - Flag indicating whether to display Firebase logo.
+ * @param {boolean} [props.prisma=false] - Flag indicating whether to display Prisma logo.
  * @param {boolean} [props.jest=false] - Flag indicating whether to display Jest logo.
  * @param {boolean} [props.csharp=false] - Flag indicating whether to display C# logo.
  * @param {boolean} [props.html=false] - Flag indicating whether to display HTML logo.
@@ -78,10 +80,10 @@ type TechStackProps = {
  *
  * @returns {JSX.Element} The rendered tech stack component.
  */
-export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, redux = false, zustand = false, next = false, node = false, express = false, mongodb = false, firebase = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, figma = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
+export default function TechStack({ text = "", width = 70, all = false, js = false, ts = false, react = false, redux = false, zustand = false, next = false, node = false, express = false, mongodb = false, firebase = false, prisma = false, jest = false, csharp = false, html = false, css = false, github = false, git = false, figma = false, tailwind = false, daisyui = false, chakraui = false, json = false, moment = false, blogger = false, nextra = false, mdx = false }: TechStackProps): JSX.Element {
 
   if (all) {
-    js = ts = react = redux = zustand = next = node = express = mongodb = firebase = jest = csharp = html = css = github = figma = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
+    js = ts = react = redux = zustand = next = node = express = mongodb = firebase = prisma = jest = csharp = html = css = github = figma = tailwind = daisyui = chakraui = git = json = moment = blogger = nextra = true;
   }
 
   const techDivStyle = "dropdown dropdown-hover item";
@@ -159,6 +161,13 @@ export default function TechStack({ text = "", width = 70, all = false, js = fal
         <div className={techDivStyle}>
           <img width={width} alt="firebase logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
           <p className={techNameStyle}>Firebase</p>
+        </div>
+      }
+
+      {prisma &&
+        <div className={techDivStyle}>
+          <img width={width} alt="prisma logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" />
+          <p className={techNameStyle}>Prisma</p>
         </div>
       }
 

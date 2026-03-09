@@ -1,7 +1,23 @@
 export const PROJECTS = [
   {
+    id: '10',
+    title: 'My Smart Health',
+    description:
+      'Learned how to do authentication and authorization with Auth.js, work with Prisma Postgres (Relational Database), how to store images and files in Vercel Blob Store and Hetzner Object Storage.',
+    techStack: {
+      next: true,
+      react: true,
+      ts: true,
+      tailwind: true,
+      prisma: true,
+      json: true,
+    },
+    website: 'https://mysmart.health/',
+    image: './assets/images/projects/my-smart-health.png',
+  },
+  {
     id: '9',
-    title: 'Currency Converter',
+    title: 'Todo Next.js + Zustand',
     description:
       "Todo application with Next.js and Zustand - no database, all todo's are stored at local-storage. Have TODO | ONGOING | DONE columns, all todo tickets can be dragged to different column.",
     techStack: {
