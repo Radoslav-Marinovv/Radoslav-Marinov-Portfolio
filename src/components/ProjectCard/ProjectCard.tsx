@@ -10,7 +10,7 @@ type ProjectCardProps = {
   title: string;
   description: string;
   techStack: object;
-  github: string;
+  github?: string;
   website?: string;
   image: string;
 };
@@ -20,7 +20,7 @@ type ProjectCardProps = {
  * @param {string} props.title - The title of the project.
  * @param {string} props.description - The description of the project.
  * @param {Object} props.techStack - The tech stack of the project.
- * @param {string} props.github - The GitHub repository of the project.
+ * @param {string} [props.github] - The GitHub repository of the project.
  * @param {string} [props.website] - The website of the project.
  * @param {string} props.image - The image of the project.
  * 
